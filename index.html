@@ -1,11 +1,235 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Friday</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Masato(S) | Profile</title>
+  <meta name="description" content="Masato(S) のプロフィールページ" />
+  <style>
+    :root{
+      --bg: #0b1020;
+      --card: rgba(255,255,255,.08);
+      --card2: rgba(255,255,255,.06);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.68);
+      --line: rgba(255,255,255,.14);
+      --accent: #8b5cf6;
+      --accent2:#22c55e;
+      --shadow: 0 20px 60px rgba(0,0,0,.45);
+      --radius: 20px;
+    }
+
+    *{ box-sizing: border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, "Hiragino Sans", "Noto Sans JP", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--text);
+      background:
+        radial-gradient(1200px 800px at 20% 10%, rgba(139,92,246,.35), transparent 60%),
+        radial-gradient(900px 600px at 80% 20%, rgba(34,197,94,.25), transparent 55%),
+        radial-gradient(900px 700px at 50% 90%, rgba(59,130,246,.18), transparent 60%),
+        linear-gradient(180deg, #070a14 0%, var(--bg) 60%, #070a14 100%);
+      line-height:1.65;
+    }
+
+    .wrap{
+      min-height: 100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding: 48px 16px;
+    }
+
+    .card{
+      width:min(980px, 100%);
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, var(--card), var(--card2));
+      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+      overflow:hidden;
+      backdrop-filter: blur(10px);
+    }
+
+    header{
+      display:flex;
+      gap: 18px;
+      align-items:center;
+      padding: 28px 28px 18px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .avatar{
+      width: 64px; height: 64px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.18);
+      background:
+        radial-gradient(circle at 30% 30%, rgba(255,255,255,.22), transparent 55%),
+        linear-gradient(135deg, rgba(139,92,246,.9), rgba(34,197,94,.65));
+      display:grid;
+      place-items:center;
+      font-weight: 800;
+      letter-spacing: .5px;
+    }
+
+    .title h1{
+      margin:0;
+      font-size: clamp(22px, 3vw, 30px);
+      letter-spacing:.2px;
+    }
+    .title p{
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 16px;
+      padding: 18px 28px 28px;
+    }
+
+    @media (max-width: 840px){
+      header{ padding: 22px 18px 14px; }
+      .grid{
+        grid-template-columns: 1fr;
+        padding: 16px 18px 22px;
+      }
+    }
+
+    section{
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 18px;
+      padding: 18px;
+      background: rgba(0,0,0,.14);
+    }
+
+    h2{
+      margin: 0 0 10px;
+      font-size: 15px;
+      letter-spacing: .2px;
+      color: rgba(255,255,255,.86);
+      display:flex;
+      align-items:center;
+      gap: 10px;
+    }
+    .dot{
+      width: 9px; height: 9px;
+      border-radius: 99px;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px rgba(139,92,246,.15);
+      flex: 0 0 auto;
+    }
+
+    .kv{
+      display:grid;
+      grid-template-columns: 120px 1fr;
+      gap: 8px 10px;
+      margin: 4px 0 0;
+    }
+    .k{ color: var(--muted); font-size: 13px; }
+    .v{ color: var(--text); font-weight: 600; }
+
+    .chips{
+      display:flex;
+      flex-wrap:wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .chip{
+      display:inline-flex;
+      align-items:center;
+      gap: 8px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.16);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.86);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+    .chip b{
+      font-weight: 800;
+      color: #fff;
+    }
+    .chip .pill{
+      width: 8px; height: 8px;
+      border-radius: 99px;
+      background: var(--accent2);
+      box-shadow: 0 0 0 4px rgba(34,197,94,.14);
+    }
+
+    .note{
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    footer{
+      padding: 14px 28px 18px;
+      border-top: 1px solid var(--line);
+      color: rgba(255,255,255,.55);
+      font-size: 12px;
+      display:flex;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    a{ color: rgba(255,255,255,.8); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+  </style>
 </head>
+
 <body>
-    <h1>Friday</h1>
+  <div class="wrap">
+    <main class="card" role="main" aria-label="プロフィール">
+      <header>
+        <div class="avatar" aria-hidden="true">MS</div>
+        <div class="title">
+          <h1>Masato(S)</h1>
+          <p>音楽と猫に癒される日々。</p>
+        </div>
+      </header>
+
+      <div class="grid">
+        <section>
+          <h2><span class="dot"></span>基本情報</h2>
+          <div class="kv" role="list">
+            <div class="k" role="listitem">名前</div>
+            <div class="v">Masato(S)</div>
+
+            <div class="k" role="listitem">趣味</div>
+            <div class="v">音楽鑑賞</div>
+
+            <div class="k" role="listitem">好きな動物</div>
+            <div class="v">猫（12匹飼い）</div>
+          </div>
+          <p class="note">好きなものを大事に、ゆるっと楽しく。</p>
+        </section>
+
+        <section>
+          <h2><span class="dot"></span>好きなアーティスト</h2>
+          <div class="chips" aria-label="好きなアーティスト一覧">
+            <span class="chip"><span class="pill" aria-hidden="true"></span><b>B'z</b></span>
+            <span class="chip"><span class="pill" aria-hidden="true"></span><b>サカナクション</b></span>
+            <span class="chip"><span class="pill" aria-hidden="true"></span><b>緑黄色社会</b></span>
+            <span class="chip"><span class="pill" aria-hidden="true"></span><b>Mrs. GREEN APPLE</b></span>
+            <span class="chip"><span class="pill" aria-hidden="true"></span><b>TOMOO</b></span>
+          </div>
+          <p class="note">気分で聴く曲が変わるタイプ。おすすめも歓迎。</p>
+        </section>
+      </div>
+
+      <footer>
+        <span>© <span id="y"></span> Masato(S)</span>
+        <span>Made with simple HTML/CSS</span>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
-</html>
+</html>S
