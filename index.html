@@ -166,6 +166,39 @@
       font-size: 13px;
     }
 
+    .actions{
+      padding: 0 28px 8px;
+      display:flex;
+      justify-content:center;
+    }
+    @media (max-width: 840px){
+      .actions{ padding: 0 18px 8px; }
+    }
+    .btn-external{
+      display:inline-flex;
+      align-items:center;
+      gap: 8px;
+      padding: 12px 20px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.22);
+      background: linear-gradient(135deg, rgba(139,92,246,.55), rgba(34,197,94,.35));
+      color: #fff;
+      font-weight: 700;
+      font-size: 14px;
+      text-decoration: none;
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+      transition: transform .15s ease, filter .15s ease;
+    }
+    .btn-external:hover{
+      transform: translateY(-1px);
+      filter: brightness(1.08);
+      text-decoration: none;
+    }
+    .btn-external:focus-visible{
+      outline: 2px solid rgba(139,92,246,.85);
+      outline-offset: 3px;
+    }
+
     footer{
       padding: 14px 28px 18px;
       border-top: 1px solid var(--line);
@@ -219,6 +252,10 @@
           </div>
           <p class="note">気分で聴く曲が変わるタイプ。おすすめも歓迎。</p>
         </section>
+      </div>
+
+      <div class="actions">
+        <a class="btn-external" href="https://github.com" target="_blank" rel="noopener noreferrer">別のサイトを開く<span aria-hidden="true"> ↗</span></a>
       </div>
 
       <footer>
