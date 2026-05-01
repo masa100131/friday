@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NextGrow — ビジネスの成長を、もっとシンプルに。</title>
+  <title>Masato(S) | Profile</title>
+  <meta name="description" content="Masato(S) のプロフィールページ" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
@@ -17,9 +18,9 @@
       --text-muted: #6a6f7a;
       --white: #ffffff;
       --page: #faf9f6;
-      --max: 1180px;
+      --max: 960px;
     }
-/* 以下のコードは、ビジネスの成長を、もっとシンプルに。のコードを参考にしています。 */
+
     *,
     *::before,
     *::after {
@@ -54,7 +55,6 @@
       margin-inline: auto;
     }
 
-    /* Header */
     .header {
       position: sticky;
       top: 0;
@@ -88,13 +88,18 @@
       height: 36px;
       background: linear-gradient(145deg, var(--blue) 0%, #7aa0f0 100%);
       border-radius: 12px;
-      clip-path: polygon(0 0, 100% 0, 100% 72%, 50% 100%, 0 72%);
+      display: grid;
+      place-items: center;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 0;
     }
 
     .nav {
       display: flex;
       align-items: center;
-      gap: 28px;
+      gap: 22px;
       flex-wrap: wrap;
       font-size: 0.9rem;
       font-weight: 500;
@@ -122,7 +127,7 @@
       font-size: 0.875rem;
       cursor: pointer;
       border: 2px solid transparent;
-      transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
+      transition: transform 0.15s, box-shadow 0.15s, background 0.15s, border-color 0.15s;
       font-family: inherit;
     }
 
@@ -174,7 +179,7 @@
     /* Hero */
     .hero {
       position: relative;
-      padding: 56px 0 80px;
+      padding: 48px 0 72px;
       overflow: hidden;
       background: linear-gradient(180deg, var(--blue-soft) 0%, var(--page) 50%, #fff 100%);
     }
@@ -193,7 +198,7 @@
     .hero-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 48px;
+      gap: 40px;
       align-items: center;
       position: relative;
     }
@@ -206,6 +211,11 @@
       .nav {
         display: none;
       }
+
+      .hero-profile-visual {
+        justify-self: center;
+        max-width: 340px;
+      }
     }
 
     .hero-kicker {
@@ -217,10 +227,10 @@
     }
 
     .hero h1 {
-      font-size: clamp(1.7rem, 4vw, 2.35rem);
+      font-size: clamp(1.75rem, 4vw, 2.4rem);
       font-weight: 700;
-      line-height: 1.38;
-      margin: 0 0 18px;
+      line-height: 1.35;
+      margin: 0 0 16px;
       color: var(--text);
       letter-spacing: 0.01em;
     }
@@ -228,136 +238,78 @@
     .hero-lead {
       color: var(--text-muted);
       font-size: 1.02rem;
-      margin-bottom: 28px;
-      max-width: 500px;
+      margin-bottom: 26px;
+      max-width: 440px;
     }
 
     .hero-ctas {
       display: flex;
       flex-wrap: wrap;
       gap: 14px;
-      margin-bottom: 28px;
+      margin-bottom: 24px;
     }
 
     .social-proof {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
       font-weight: 500;
-      font-size: 0.92rem;
+      font-size: 0.9rem;
       color: var(--text-muted);
     }
 
     .laurel {
-      font-size: 1.25rem;
+      font-size: 1.15rem;
       opacity: 0.85;
     }
 
-    /* Hero visual — dashboard mockup */
-    .hero-visual {
-      position: relative;
+    .hero-profile-visual {
       justify-self: end;
       width: 100%;
-      max-width: 520px;
+      max-width: 380px;
     }
 
-    .mock-laptop {
-      background: linear-gradient(145deg, #f4f6fb 0%, #e8edf6 100%);
-      border-radius: 22px;
-      padding: 12px 12px 20px;
-      box-shadow: 0 20px 50px rgba(74, 111, 212, 0.12), 0 0 0 1px rgba(74, 111, 212, 0.05);
+    .showcase-card {
+      background: var(--white);
+      border-radius: 24px;
+      padding: 32px 28px;
+      box-shadow: 0 20px 50px rgba(74, 111, 212, 0.1), 0 0 0 1px rgba(74, 111, 212, 0.06);
+      text-align: center;
     }
 
-    .mock-screen {
-      background: #fff;
-      border-radius: 14px;
-      overflow: hidden;
-      aspect-ratio: 16 / 10;
-      padding: 14px;
+    .avatar-xl {
+      width: 112px;
+      height: 112px;
+      margin: 0 auto 18px;
+      border-radius: 28px;
+      background:
+        radial-gradient(circle at 28% 28%, rgba(255, 255, 255, 0.35), transparent 55%),
+        linear-gradient(145deg, var(--blue) 0%, #9bb6f5 100%);
       display: grid;
-      grid-template-columns: 1fr 120px;
-      gap: 12px;
+      place-items: center;
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 0.04em;
     }
 
-    .mock-phone {
-      position: absolute;
-      bottom: -12px;
-      left: 8%;
-      width: 100px;
-      height: 200px;
-      background: #1e293b;
-      border-radius: 18px;
-      padding: 8px;
-      box-shadow: 0 14px 28px rgba(52, 56, 66, 0.18);
-    }
-
-    .mock-phone-inner {
-      background: #fff;
-      border-radius: 12px;
-      height: 100%;
-      padding: 10px;
-      font-size: 8px;
+    .showcase-tagline {
+      margin: 0 0 16px;
+      font-size: 0.95rem;
       color: var(--text-muted);
+      line-height: 1.65;
     }
 
-    .chart-mini {
-      height: 70px;
-      background: linear-gradient(180deg, rgba(74, 111, 212, 0.07) 0%, transparent 100%);
-      border-radius: 10px;
-      position: relative;
-    }
-
-    .chart-mini::after {
-      content: "";
-      position: absolute;
-      bottom: 8px;
-      left: 8px;
-      right: 8px;
-      height: 40px;
-      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 40'%3E%3Cpath d='M0 35 L15 28 L30 32 L45 18 L60 22 L75 8 L100 12 L100 40 L0 40 Z' fill='%234a6fd4' opacity='0.32'/%3E%3Cpath d='M0 35 L15 28 L30 32 L45 18 L60 22 L75 8 L100 12' stroke='%234a6fd4' fill='none' stroke-width='2'/%3E%3C/svg%3E") no-repeat center bottom;
-      background-size: 100% auto;
-    }
-
-    .donut-wrap {
+    .showcase-chips {
       display: flex;
-      align-items: center;
+      flex-wrap: wrap;
       justify-content: center;
-    }
-
-    .donut {
-      width: 72px;
-      height: 72px;
-      border-radius: 50%;
-      background: conic-gradient(var(--blue) 0 65%, var(--blue-soft) 65% 100%);
-      mask: radial-gradient(farthest-side, transparent 58%, #000 59%);
-      -webkit-mask: radial-gradient(farthest-side, transparent 58%, #000 59%);
-    }
-
-    .mock-stats {
-      grid-column: 1 / -1;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
       gap: 8px;
-      font-size: 0.7rem;
     }
 
-    .mock-stat {
-      background: var(--blue-soft);
-      padding: 8px 10px;
-      border-radius: 10px;
-      color: var(--text);
-    }
-
-    .mock-stat strong {
-      display: block;
-      font-size: 0.85rem;
-      color: var(--blue-deep);
-      font-weight: 600;
-    }
-
-    /* Features */
+    /* Sections */
     .section {
-      padding: 72px 0;
+      padding: 64px 0;
     }
 
     .section-label {
@@ -371,17 +323,17 @@
 
     .section-title {
       text-align: center;
-      font-size: clamp(1.3rem, 3vw, 1.65rem);
+      font-size: clamp(1.28rem, 3vw, 1.6rem);
       font-weight: 700;
       color: var(--text);
-      margin: 0 0 48px;
+      margin: 0 0 40px;
       letter-spacing: 0.02em;
     }
 
     .features-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 28px;
+      gap: 24px;
     }
 
     @media (max-width: 900px) {
@@ -398,13 +350,13 @@
 
     .feature-card {
       text-align: center;
-      padding: 8px;
+      padding: 12px 8px;
     }
 
     .feature-icon {
       width: 72px;
       height: 72px;
-      margin: 0 auto 18px;
+      margin: 0 auto 16px;
       background: linear-gradient(160deg, var(--blue-soft) 0%, #fff 100%);
       border-radius: 50%;
       display: flex;
@@ -412,264 +364,149 @@
       justify-content: center;
       color: var(--blue-deep);
       box-shadow: 0 4px 16px rgba(74, 111, 212, 0.08);
+      font-size: 1.75rem;
     }
 
     .feature-card h3 {
       font-size: 1rem;
-      margin: 0 0 10px;
+      margin: 0 0 8px;
       font-weight: 700;
       color: var(--text);
     }
 
     .feature-card p {
       margin: 0;
-      font-size: 0.85rem;
+      font-size: 0.88rem;
       color: var(--text-muted);
       line-height: 1.65;
     }
 
-    /* Problem / Solution */
-    .problem-section {
-      padding: 56px 0 72px;
+    /* About */
+    .about-section {
+      padding: 0 0 64px;
     }
 
-    .problem-inner {
-      background: linear-gradient(165deg, var(--blue-soft) 0%, #f5f7fc 100%);
-      border-radius: 28px;
-      padding: 48px 40px;
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
-    }
-
-    .problem-inner > h2 {
-      text-align: center;
-      font-size: 1.28rem;
-      margin: 0 0 40px;
-      font-weight: 700;
-      color: var(--text);
-      letter-spacing: 0.02em;
-    }
-
-    .problem-flow {
+    .about-grid {
       display: grid;
-      grid-template-columns: 1fr auto 1.1fr;
+      grid-template-columns: 1fr 1fr;
       gap: 24px;
-      align-items: center;
+      align-items: start;
     }
 
-    @media (max-width: 900px) {
-      .problem-flow {
+    @media (max-width: 800px) {
+      .about-grid {
         grid-template-columns: 1fr;
-        justify-items: center;
-      }
-
-      .flow-arrow {
-        transform: rotate(90deg);
       }
     }
 
-    .pain-card {
-      background: var(--white);
-      border-radius: 20px;
-      padding: 28px 24px;
-      box-shadow: 0 12px 36px rgba(52, 56, 66, 0.06);
-      width: 100%;
-      max-width: 380px;
-    }
-
-    .pain-list {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    .pain-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      margin-bottom: 14px;
-      font-size: 0.9rem;
-      color: var(--text);
-    }
-
-    .pain-list li:last-child {
-      margin-bottom: 0;
-    }
-
-    .check {
-      flex-shrink: 0;
-      width: 22px;
-      height: 22px;
-      border-radius: 50%;
-      background: linear-gradient(145deg, var(--blue) 0%, #8aaef0 100%);
-      color: var(--white);
-      font-size: 11px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 2px;
-    }
-
-    .flow-arrow {
-      font-size: 1.75rem;
-      color: var(--blue);
-      font-weight: 500;
-      opacity: 0.85;
-    }
-
-    .solution-block {
-      text-align: left;
-    }
-
-    .solution-block h3 {
-      font-size: 1.2rem;
-      margin: 0 0 12px;
-      color: var(--text);
-    }
-
-    .solution-block p {
-      margin: 0 0 20px;
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      max-width: 360px;
-    }
-
-    .solution-illus {
-      margin-top: 20px;
-      display: flex;
-      justify-content: flex-end;
-    }
-
-    .illus-character {
-      width: 180px;
-      height: 140px;
-      background: linear-gradient(135deg, rgba(122, 160, 240, 0.15) 0%, rgba(255, 255, 255, 0.6) 100%);
-      border-radius: 20px;
-      position: relative;
-      border: 2px dashed rgba(74, 111, 212, 0.12);
-    }
-
-    .illus-character::before {
-      content: "💼";
-      position: absolute;
-      font-size: 3rem;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -55%);
-    }
-
-    .illus-character::after {
-      content: "OK";
-      position: absolute;
-      bottom: 16px;
-      right: 20px;
-      font-size: 0.72rem;
-      font-weight: 700;
-      color: var(--blue-deep);
-      background: var(--white);
-      padding: 4px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(74, 111, 212, 0.25);
-    }
-
-    /* Pricing */
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      align-items: stretch;
-    }
-
-    @media (max-width: 900px) {
-      .pricing-grid {
-        grid-template-columns: 1fr;
-        max-width: 400px;
-        margin-inline: auto;
-      }
-    }
-
-    .price-card {
+    .profile-panel {
       background: var(--white);
       border-radius: 22px;
-      padding: 28px 24px 32px;
-      border: 1px solid rgba(74, 111, 212, 0.1);
+      padding: 28px 26px;
+      border: 1px solid rgba(74, 111, 212, 0.08);
       box-shadow: 0 10px 32px rgba(52, 56, 66, 0.05);
-      display: flex;
-      flex-direction: column;
-      position: relative;
     }
 
-    .price-card.featured {
-      border-color: rgba(74, 111, 212, 0.35);
-      box-shadow: 0 18px 44px rgba(74, 111, 212, 0.14);
-      transform: scale(1.02);
-    }
-
-    .badge-popular {
-      position: absolute;
-      top: -12px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: linear-gradient(135deg, var(--blue) 0%, #6b93ea 100%);
-      color: var(--white);
-      font-size: 0.7rem;
+    .profile-panel h3 {
+      margin: 0 0 18px;
+      font-size: 1.05rem;
       font-weight: 700;
-      padding: 6px 16px;
-      border-radius: 999px;
-      white-space: nowrap;
+      color: var(--text);
     }
 
-    .price-card h3 {
-      margin: 8px 0 12px;
-      font-size: 1.1rem;
-      text-align: center;
+    .profile-kv {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 10px 14px;
+      font-size: 0.92rem;
+      margin: 0;
     }
 
-    .price-amount {
-      text-align: center;
-      font-size: 1.75rem;
-      font-weight: 700;
-      color: var(--blue-deep);
-      margin-bottom: 20px;
-    }
-
-    .price-card.featured .price-amount {
-      margin-top: 8px;
-    }
-
-    .price-features {
-      list-style: none;
-      margin: 0 0 24px;
-      padding: 0;
-      flex-grow: 1;
-      font-size: 0.875rem;
+    .profile-kv dt {
       color: var(--text-muted);
+      font-weight: 500;
     }
 
-    .price-features li {
-      padding: 8px 0;
-      border-bottom: 1px solid rgba(74, 111, 212, 0.07);
-      padding-left: 22px;
-      position: relative;
-    }
-
-    .price-features li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      color: var(--blue);
+    .profile-kv dd {
+      margin: 0;
+      color: var(--text);
       font-weight: 600;
     }
 
-    .price-card .btn {
-      width: 100%;
-      margin-top: auto;
+    .profile-note {
+      margin: 18px 0 0;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .about-prose {
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+
+    /* Artists band */
+    .music-section {
+      padding: 56px 0 72px;
+    }
+
+    .music-inner {
+      background: linear-gradient(165deg, var(--blue-soft) 0%, #f5f7fc 100%);
+      border-radius: 28px;
+      padding: 44px 36px 48px;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    }
+
+    .music-inner > h2 {
+      text-align: center;
+      font-size: 1.22rem;
+      margin: 0 0 8px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .music-inner > p.sub {
+      text-align: center;
+      margin: 0 0 28px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: var(--white);
+      border: 1px solid rgba(74, 111, 212, 0.12);
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text);
+      box-shadow: 0 2px 10px rgba(52, 56, 66, 0.04);
+    }
+
+    .chip-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: linear-gradient(145deg, var(--blue) 0%, #8aaef0 100%);
+      flex-shrink: 0;
     }
 
     /* Footer CTA */
     .footer-cta {
       background: linear-gradient(120deg, var(--blue-deep) 0%, var(--blue) 48%, #7aa0f0 100%);
       padding: 40px 0;
-      margin-top: 24px;
+      margin-top: 8px;
     }
 
     .footer-cta-inner {
@@ -682,37 +519,37 @@
 
     .cta-badge {
       flex-shrink: 0;
-      width: 100px;
-      height: 100px;
+      width: 96px;
+      height: 96px;
       border-radius: 50%;
       background: rgba(255, 255, 255, 0.95);
       color: var(--blue-deep);
       font-weight: 700;
-      font-size: 0.82rem;
+      font-size: 0.78rem;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      line-height: 1.3;
-      padding: 12px;
+      line-height: 1.35;
+      padding: 10px;
     }
 
     .cta-copy {
       flex: 1;
-      min-width: 220px;
+      min-width: 200px;
       color: var(--white);
     }
 
     .cta-copy h2 {
       margin: 0 0 8px;
-      font-size: clamp(1.1rem, 2.5vw, 1.45rem);
+      font-size: clamp(1.08rem, 2.5vw, 1.4rem);
       font-weight: 700;
       letter-spacing: 0.02em;
     }
 
     .cta-copy p {
       margin: 0;
-      font-size: 0.92rem;
+      font-size: 0.9rem;
       opacity: 0.92;
       line-height: 1.65;
     }
@@ -733,188 +570,136 @@
 <body>
   <header class="header">
     <div class="container header-inner">
-      <a href="#" class="logo">
-        <span class="logo-mark" aria-hidden="true"></span>
-        NextGrow
+      <a href="#top" class="logo">
+        <span class="logo-mark" aria-hidden="true">MS</span>
+        Masato(S)
       </a>
-      <nav class="nav" aria-label="メイン">
-        <a href="#features">機能</a>
-        <a href="#features">特徴</a>
-        <a href="#problem">導入事例</a>
-        <a href="#pricing">料金プラン</a>
-        <a href="#faq">よくある質問</a>
+      <nav class="nav" aria-label="ページ内">
+        <a href="#about">自己紹介</a>
+        <a href="#likes">好きなこと</a>
+        <a href="#artists">アーティスト</a>
       </nav>
       <div class="header-actions">
-        <a href="index.html" class="btn btn-outline">ログイン</a>
-        <a href="index.html" class="btn btn-primary">無料で始める</a>
+        <a href="index.html" class="btn btn-outline">コンパクト表示</a>
       </div>
     </div>
   </header>
 
-  <section class="hero">
+  <section class="hero" id="top">
     <div class="container hero-grid">
       <div>
-        <p class="hero-kicker">中小企業・個人事業主さま向けの成長支援ツール</p>
-        <h1>ビジネスの成長を、もっとシンプルに。</h1>
+        <p class="hero-kicker">プロフィール</p>
+        <h1>Masato(S)</h1>
         <p class="hero-lead">
-          集客・顧客管理・分析を、NextGrowひとつでそっとまとめます。日々のムダを減らして、次の一歩に集中できるように。
+          音楽と猫に癒される日々。好きなものを大事に、ゆるっと楽しく過ごしています。
         </p>
         <div class="hero-ctas">
-          <a href="index.html" class="btn btn-primary btn-lg">無料で始める &gt;</a>
-          <a href="index.html" class="btn btn-outline btn-lg">資料をダウンロード</a>
+          <a href="#artists" class="btn btn-primary btn-lg">好きな音楽を見る</a>
+          <a href="index.html" class="btn btn-outline btn-lg">別レイアウトで見る</a>
         </div>
         <div class="social-proof">
-          <span class="laurel" aria-hidden="true">🌿</span>
-          <span>導入社数 5,000社を突破しました</span>
-          <span class="laurel" aria-hidden="true">🌿</span>
+          <span class="laurel" aria-hidden="true">🐱</span>
+          <span>猫は 12 匹と暮らしています</span>
+          <span class="laurel" aria-hidden="true">🎵</span>
         </div>
       </div>
-      <div class="hero-visual">
-        <div class="mock-laptop">
-          <div class="mock-screen">
-            <div>
-              <div class="chart-mini" aria-hidden="true"></div>
-              <div class="mock-stats">
-                <div class="mock-stat"><strong>Total Customers</strong>12,345</div>
-                <div class="mock-stat"><strong>Sales</strong>¥8,765,432</div>
-              </div>
-            </div>
-            <div class="donut-wrap"><div class="donut" aria-hidden="true"></div></div>
-          </div>
-        </div>
-        <div class="mock-phone" aria-hidden="true">
-          <div class="mock-phone-inner">
-            <div style="height:6px;background:#e2e8f0;border-radius:3px;margin-bottom:8px;width:60%"></div>
-            <div class="chart-mini" style="height:48px"></div>
+      <div class="hero-profile-visual">
+        <div class="showcase-card">
+          <div class="avatar-xl" aria-hidden="true">MS</div>
+          <p class="showcase-tagline">気分で聴く曲が変わるタイプ。<br>おすすめもいつでも歓迎です。</p>
+          <div class="showcase-chips">
+            <span class="chip"><span class="chip-dot" aria-hidden="true"></span>B'z</span>
+            <span class="chip"><span class="chip-dot" aria-hidden="true"></span>猫</span>
+            <span class="chip"><span class="chip-dot" aria-hidden="true"></span>音楽</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section" id="features">
-    <p class="section-label">できること</p>
-    <h2 class="section-title">NextGrowでできること</h2>
+  <section class="section" id="likes">
+    <p class="section-label">日常のなかで</p>
+    <h2 class="section-title">大切にしていること</h2>
     <div class="container features-grid">
       <article class="feature-card">
-        <div class="feature-icon" aria-hidden="true">
-          <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 11c2.2 0 4 1.8 4 4v3H8v-3c0-2.2 1.8-4 4-4z"/><circle cx="16" cy="7" r="3"/></svg>
-        </div>
-        <h3>顧客管理を、すこし楽に</h3>
-        <p>連絡先ややり取りをひとまとめに。気づいたときに、さっとフォローできます。</p>
+        <div class="feature-icon" aria-hidden="true">🎧</div>
+        <h3>音楽を聴く時間</h3>
+        <p>通勤や作業の合間に、気分に合わせてプレイリストを組み替えたりしています。</p>
       </article>
       <article class="feature-card">
-        <div class="feature-icon" aria-hidden="true">
-          <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20l8-8 4 4 8-8"/><path d="M16 4h8v8"/></svg>
-        </div>
-        <h3>集客の流れをなめらかに</h3>
-        <p>キャンペーンやフォーム連携で、見込み客との出会いを無理なく育てられます。</p>
+        <div class="feature-icon" aria-hidden="true">🐈</div>
+        <h3>猫たちとの暮らし</h3>
+        <p>にぎやかな家のなかで、ふとした寝顔にほっとする瞬間がたくさんあります。</p>
       </article>
       <article class="feature-card">
-        <div class="feature-icon" aria-hidden="true">
-          <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 18V6"/><path d="M10 18V10"/><path d="M16 18v-5"/><path d="M22 18V8"/></svg>
-        </div>
-        <h3>数字を、やさしく見える化</h3>
-        <p>売上や顧客の動きをグラフでざっくり把握。次に何をするか、考えやすくなります。</p>
+        <div class="feature-icon" aria-hidden="true">☕</div>
+        <h3>ゆるいペースで</h3>
+        <p>完璧より続くことを意識して、無理のないリズムで日々を重ねています。</p>
       </article>
       <article class="feature-card">
-        <div class="feature-icon" aria-hidden="true">
-          <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9c.26.604.852.997 1.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
-        </div>
-        <h3>あなたのペースで始められる</h3>
-        <p>規模や業種に合わせて設定できるので、いきなり完璧を目指さなくて大丈夫です。</p>
+        <div class="feature-icon" aria-hidden="true">✨</div>
+        <h3>小さな楽しみ</h3>
+        <p>新しい一曲との出会いや、ふとした発見を大切にしたいと思っています。</p>
       </article>
     </div>
   </section>
 
-  <section class="problem-section" id="problem">
-    <div class="container problem-inner">
-      <h2>こんなこと、心当たりありませんか？</h2>
-      <div class="problem-flow">
-        <div class="pain-card">
-          <ul class="pain-list">
-            <li><span class="check">✓</span>顧客情報がバラバラで管理が大変...</li>
-            <li><span class="check">✓</span>集客の効果が見えず、改善ができない...</li>
-            <li><span class="check">✓</span>分析ツールが難しくて使いこなせない...</li>
-            <li><span class="check">✓</span>人手が足りず、業務に時間がかかる...</li>
-          </ul>
-        </div>
-        <div class="flow-arrow" aria-hidden="true">→</div>
-        <div class="solution-block">
-          <h3>そのあたり、NextGrowにおまかせください</h3>
-          <p>
-            画面はできるだけシンプルに。必要な機能だけをそろえているので、いきなり難しい操作におびえなくて大丈夫です。
-          </p>
-          <a href="#" class="btn btn-primary btn-lg">無料で始める &gt;</a>
-          <div class="solution-illus">
-            <div class="illus-character" role="img" aria-label="ノートパソコンで作業するビジネスパーソンのイメージ"></div>
-          </div>
-        </div>
+  <section class="about-section" id="about">
+    <p class="section-label">プロフィール</p>
+    <h2 class="section-title">少しだけ、わたしのこと</h2>
+    <div class="container about-grid">
+      <div class="profile-panel">
+        <h3>基本情報</h3>
+        <dl class="profile-kv">
+          <dt>名前</dt>
+          <dd>Masato(S)</dd>
+          <dt>趣味</dt>
+          <dd>音楽鑑賞</dd>
+          <dt>好きな動物</dt>
+          <dd>猫（12 匹飼い）</dd>
+        </dl>
+        <p class="profile-note">このページは HTML と CSS だけで作っています。</p>
+      </div>
+      <div class="profile-panel">
+        <h3>ひとこと</h3>
+        <p class="about-prose">
+          プロフィールを「やわらかい雰囲気」のまま、ひとつのページとしてまとめました。仕事用の自己紹介というより、気軽に読んでもらえる自己紹介をイメージしています。内容はいつでも差し替え可能です。
+        </p>
       </div>
     </div>
   </section>
 
-  <section class="section" id="pricing">
-    <p class="section-label">料金</p>
-    <h2 class="section-title">わかりやすい料金プラン</h2>
-    <div class="container pricing-grid">
-      <div class="price-card">
-        <h3>スタータープラン</h3>
-        <p class="price-amount">¥0<span style="font-size:1rem;font-weight:600"> /月</span></p>
-        <ul class="price-features">
-          <li>基本の顧客管理</li>
-          <li>レポート（月次）</li>
-          <li>メールサポート</li>
-        </ul>
-        <a href="index.html" class="btn btn-outline">無料で始める</a>
+  <section class="music-section" id="artists">
+    <div class="container music-inner">
+      <h2>好きなアーティスト</h2>
+      <p class="sub">気分で聴く曲が変わるタイプ。おすすめも歓迎です。</p>
+      <div class="chip-row" aria-label="好きなアーティスト一覧">
+        <span class="chip"><span class="chip-dot" aria-hidden="true"></span>B'z</span>
+        <span class="chip"><span class="chip-dot" aria-hidden="true"></span>サカナクション</span>
+        <span class="chip"><span class="chip-dot" aria-hidden="true"></span>緑黄色社会</span>
+        <span class="chip"><span class="chip-dot" aria-hidden="true"></span>Mrs. GREEN APPLE</span>
+        <span class="chip"><span class="chip-dot" aria-hidden="true"></span>TOMOO</span>
       </div>
-      <div class="price-card featured">
-        <span class="badge-popular">いちばん選ばれています</span>
-        <h3>スタンダードプラン</h3>
-        <p class="price-amount">¥9,800<span style="font-size:1rem;font-weight:600"> /月</span></p>
-        <ul class="price-features">
-          <li>スターターの全機能</li>
-          <li>集客キャンペーン連携</li>
-          <li>詳細ダッシュボード</li>
-          <li>チャットサポート</li>
-        </ul>
-        <a href="index.html" class="btn btn-primary">無料で始める</a>
-      </div>
-      <div class="price-card">
-        <h3>プロフェッショナルプラン</h3>
-        <p class="price-amount">¥29,800<span style="font-size:1rem;font-weight:600"> /月</span></p>
-        <ul class="price-features">
-          <li>スタンダードの全機能</li>
-          <li>API連携・カスタム</li>
-          <li>専任サポート</li>
-          <li>高度な分析レポート</li>
-        </ul>
-        <a href="index.html" class="btn btn-outline">無料で始める</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="faq" style="padding-top:32px;padding-bottom:32px">
-    <p class="section-label">サポート</p>
-    <h2 class="section-title" style="margin-bottom:16px">よくあるご質問</h2>
-    <div class="container" style="max-width:640px;text-align:center;color:var(--text-muted);font-size:0.9rem">
-      <p style="margin:0">ここにアコーディオンや項目を追加できます。</p>
     </div>
   </section>
 
   <div class="footer-cta">
     <div class="container footer-cta-inner">
-      <div class="cta-badge">およそ<br>1分で完了</div>
+      <div class="cta-badge">別の<br>見え方</div>
       <div class="cta-copy">
-        <h2>まずは無料から、気軽にどうぞ</h2>
-        <p>クレジットカードの登録は不要です。思い立ったその日から、始められます。</p>
+        <h2>ダークテーマのコンパクト版</h2>
+        <p>同じ内容を、ガラス風のカード一枚にまとめたレイアウトもあります。</p>
       </div>
-      <a href="index.html" class="btn btn-yellow">無料で始める &gt;</a>
+      <a href="index.html" class="btn btn-yellow">index.html を開く</a>
     </div>
   </div>
 
   <footer class="site-footer">
-    <p>© NextGrow. All rights reserved.</p>
+    <p>© <span id="y"></span> Masato(S) · Made with simple HTML/CSS</p>
   </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
