@@ -137,33 +137,32 @@
     .k{ color: var(--muted); font-size: 13px; }
     .v{ color: var(--text); font-weight: 600; }
 
-    .chips{
+    .artist-logos{
       display:flex;
       flex-wrap:wrap;
-      gap: 10px;
+      gap: 12px;
       margin-top: 10px;
+      align-items: center;
     }
-    .chip{
+    .artist-logo{
       display:inline-flex;
       align-items:center;
-      gap: 8px;
-      padding: 8px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.16);
-      background: rgba(255,255,255,.06);
-      color: rgba(255,255,255,.86);
-      font-size: 13px;
-      white-space: nowrap;
+      justify-content:center;
+      height: 52px;
+      min-width: 72px;
+      max-width: 148px;
+      padding: 6px 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,.18);
+      background: rgba(255,255,255,.08);
     }
-    .chip b{
-      font-weight: 800;
-      color: #fff;
-    }
-    .chip .pill{
-      width: 8px; height: 8px;
-      border-radius: 99px;
-      background: var(--accent2);
-      box-shadow: 0 0 0 4px rgba(34,197,94,.14);
+    .artist-logo img{
+      max-height: 34px;
+      max-width: 124px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      display: block;
     }
 
     .note{
@@ -251,12 +250,12 @@
 
         <section>
           <h2><span class="dot"></span>好きなアーティスト</h2>
-          <div class="chips" aria-label="好きなアーティスト一覧">
-            <span class="chip"><span class="pill" aria-hidden="true"></span><b>B'z</b></span>
-            <span class="chip"><span class="pill" aria-hidden="true"></span><b>サカナクション</b></span>
-            <span class="chip"><span class="pill" aria-hidden="true"></span><b>緑黄色社会</b></span>
-            <span class="chip"><span class="pill" aria-hidden="true"></span><b>Mrs. GREEN APPLE</b></span>
-            <span class="chip"><span class="pill" aria-hidden="true"></span><b>TOMOO</b></span>
+          <div class="artist-logos" role="list" aria-label="好きなアーティスト（ロゴ）">
+            <div class="artist-logo" role="listitem"><img src="images/artists/bz.png" width="200" height="64" alt="B'z" loading="lazy" decoding="async" /></div>
+            <div class="artist-logo" role="listitem"><img src="images/artists/sakanaction.png" width="200" height="64" alt="サカナクション" loading="lazy" decoding="async" /></div>
+            <div class="artist-logo" role="listitem"><img src="images/artists/ryokuoushoku.png" width="200" height="64" alt="緑黄色社会" loading="lazy" decoding="async" /></div>
+            <div class="artist-logo" role="listitem"><img src="images/artists/mrs_green_apple.png" width="200" height="64" alt="Mrs. GREEN APPLE" loading="lazy" decoding="async" /></div>
+            <div class="artist-logo" role="listitem"><img src="images/artists/tomoo.png" width="200" height="64" alt="TOMOO" loading="lazy" decoding="async" /></div>
           </div>
           <p class="note">気分で聴く曲が変わるタイプ。おすすめも歓迎。</p>
         </section>
