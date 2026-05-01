@@ -60,16 +60,22 @@
     }
 
     .avatar{
-      width: 64px; height: 64px;
+      flex: 0 0 auto;
+      width: 64px;
+      height: 64px;
       border-radius: 18px;
       border: 1px solid rgba(255,255,255,.18);
+      overflow: hidden;
       background:
         radial-gradient(circle at 30% 30%, rgba(255,255,255,.22), transparent 55%),
         linear-gradient(135deg, rgba(139,92,246,.9), rgba(34,197,94,.65));
-      display:grid;
-      place-items:center;
-      font-weight: 800;
-      letter-spacing: .5px;
+    }
+
+    .avatar img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     .title h1{
@@ -218,7 +224,9 @@
   <div class="wrap">
     <main class="card" role="main" aria-label="プロフィール">
       <header>
-        <div class="avatar" aria-hidden="true">MS</div>
+        <div class="avatar">
+          <img src="images/profile.jpg" width="128" height="128" alt="Masato(S)" decoding="async" />
+        </div>
         <div class="title">
           <h1>Masato(S)</h1>
           <p>音楽と猫に癒される日々。</p>

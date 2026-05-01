@@ -50,6 +50,14 @@
       display: block;
     }
 
+    .logo-mark img,
+    .avatar-xl img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      max-width: none;
+    }
+
     .container {
       width: min(100% - 48px, var(--max));
       margin-inline: auto;
@@ -86,14 +94,10 @@
     .logo-mark {
       width: 36px;
       height: 36px;
+      flex-shrink: 0;
       background: linear-gradient(145deg, var(--blue) 0%, #7aa0f0 100%);
       border-radius: 12px;
-      display: grid;
-      place-items: center;
-      font-size: 0.72rem;
-      font-weight: 700;
-      color: var(--white);
-      letter-spacing: 0;
+      overflow: hidden;
     }
 
     .nav {
@@ -282,15 +286,10 @@
       height: 112px;
       margin: 0 auto 18px;
       border-radius: 28px;
+      overflow: hidden;
       background:
         radial-gradient(circle at 28% 28%, rgba(255, 255, 255, 0.35), transparent 55%),
         linear-gradient(145deg, var(--blue) 0%, #9bb6f5 100%);
-      display: grid;
-      place-items: center;
-      font-size: 1.75rem;
-      font-weight: 700;
-      color: var(--white);
-      letter-spacing: 0.04em;
     }
 
     .showcase-tagline {
@@ -571,7 +570,7 @@
   <header class="header">
     <div class="container header-inner">
       <a href="#top" class="logo">
-        <span class="logo-mark" aria-hidden="true">MS</span>
+        <span class="logo-mark"><img src="images/profile.jpg" width="72" height="72" alt="" decoding="async" /></span>
         Masato(S)
       </a>
       <nav class="nav" aria-label="ページ内">
@@ -605,7 +604,9 @@
       </div>
       <div class="hero-profile-visual">
         <div class="showcase-card">
-          <div class="avatar-xl" aria-hidden="true">MS</div>
+          <div class="avatar-xl">
+            <img src="images/profile.jpg" width="224" height="224" alt="Masato(S)" decoding="async" />
+          </div>
           <p class="showcase-tagline">気分で聴く曲が変わるタイプ。<br>おすすめもいつでも歓迎です。</p>
           <div class="showcase-chips">
             <span class="chip"><span class="chip-dot" aria-hidden="true"></span>B'z</span>
