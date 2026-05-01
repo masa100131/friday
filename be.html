@@ -6,15 +6,17 @@
   <title>NextGrow — ビジネスの成長を、もっとシンプルに。</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --blue: #0059d1;
-      --blue-soft: #e9f2ff;
-      --yellow: #ffeb3b;
-      --text: #1a1a2e;
-      --text-muted: #5c6370;
+      --blue: #4a6fd4;
+      --blue-deep: #3d5fb8;
+      --blue-soft: #eef3fc;
+      --yellow: #ffe566;
+      --text: #343842;
+      --text-muted: #6a6f7a;
       --white: #ffffff;
+      --page: #faf9f6;
       --max: 1180px;
     }
 /* 以下のコードは、ビジネスの成長を、もっとシンプルに。のコードを参考にしています。 */
@@ -30,10 +32,10 @@
 
     body {
       margin: 0;
-      font-family: "Noto Sans JP", system-ui, sans-serif;
+      font-family: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", "Yu Gothic UI", system-ui, sans-serif;
       color: var(--text);
-      line-height: 1.6;
-      background: var(--white);
+      line-height: 1.75;
+      background: var(--page);
     }
 
     a {
@@ -57,9 +59,9 @@
       position: sticky;
       top: 0;
       z-index: 50;
-      background: rgba(255, 255, 255, 0.92);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid rgba(0, 89, 209, 0.08);
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(74, 111, 212, 0.06);
     }
 
     .header-inner {
@@ -76,15 +78,16 @@
       align-items: center;
       gap: 10px;
       font-weight: 700;
-      font-size: 1.25rem;
-      color: var(--blue);
+      font-size: 1.2rem;
+      color: var(--blue-deep);
+      letter-spacing: 0.02em;
     }
 
     .logo-mark {
       width: 36px;
       height: 36px;
-      background: linear-gradient(135deg, var(--blue) 0%, #3d8aff 100%);
-      border-radius: 8px;
+      background: linear-gradient(145deg, var(--blue) 0%, #7aa0f0 100%);
+      border-radius: 12px;
       clip-path: polygon(0 0, 100% 0, 100% 72%, 50% 100%, 0 72%);
     }
 
@@ -95,6 +98,7 @@
       flex-wrap: wrap;
       font-size: 0.9rem;
       font-weight: 500;
+      color: var(--text-muted);
     }
 
     .nav a:hover {
@@ -112,8 +116,8 @@
       align-items: center;
       justify-content: center;
       gap: 6px;
-      padding: 10px 20px;
-      border-radius: 8px;
+      padding: 10px 22px;
+      border-radius: 999px;
       font-weight: 600;
       font-size: 0.875rem;
       cursor: pointer;
@@ -128,8 +132,13 @@
 
     .btn-outline {
       background: var(--white);
-      border-color: var(--blue);
-      color: var(--blue);
+      border-color: rgba(74, 111, 212, 0.35);
+      color: var(--blue-deep);
+    }
+
+    .btn-outline:hover {
+      background: var(--blue-soft);
+      border-color: rgba(74, 111, 212, 0.2);
     }
 
     .btn-primary {
@@ -139,26 +148,27 @@
     }
 
     .btn-primary:hover {
-      box-shadow: 0 8px 24px rgba(0, 89, 209, 0.35);
+      box-shadow: 0 10px 28px rgba(74, 111, 212, 0.28);
     }
 
     .btn-lg {
-      padding: 14px 28px;
+      padding: 14px 30px;
       font-size: 1rem;
-      border-radius: 10px;
+      border-radius: 999px;
     }
 
     .btn-yellow {
       background: var(--yellow);
       color: var(--text);
-      border-color: var(--yellow);
+      border-color: transparent;
       font-weight: 700;
       font-size: 1rem;
-      padding: 14px 28px;
+      padding: 14px 30px;
+      border-radius: 999px;
     }
 
     .btn-yellow:hover {
-      box-shadow: 0 8px 24px rgba(255, 235, 59, 0.45);
+      box-shadow: 0 10px 28px rgba(255, 200, 80, 0.35);
     }
 
     /* Hero */
@@ -166,7 +176,7 @@
       position: relative;
       padding: 56px 0 80px;
       overflow: hidden;
-      background: linear-gradient(180deg, var(--blue-soft) 0%, #fff 55%);
+      background: linear-gradient(180deg, var(--blue-soft) 0%, var(--page) 50%, #fff 100%);
     }
 
     .hero::before {
@@ -176,7 +186,7 @@
       height: 700px;
       right: -200px;
       top: -150px;
-      background: radial-gradient(circle, rgba(0, 89, 209, 0.12) 0%, transparent 65%);
+      background: radial-gradient(circle, rgba(122, 160, 240, 0.2) 0%, transparent 68%);
       pointer-events: none;
     }
 
@@ -199,26 +209,27 @@
     }
 
     .hero-kicker {
-      color: var(--blue);
-      font-weight: 600;
+      color: var(--blue-deep);
+      font-weight: 500;
       font-size: 0.9rem;
       margin-bottom: 12px;
-      letter-spacing: 0.02em;
+      letter-spacing: 0.04em;
     }
 
     .hero h1 {
-      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-size: clamp(1.7rem, 4vw, 2.35rem);
       font-weight: 700;
-      line-height: 1.25;
-      margin: 0 0 16px;
+      line-height: 1.38;
+      margin: 0 0 18px;
       color: var(--text);
+      letter-spacing: 0.01em;
     }
 
     .hero-lead {
       color: var(--text-muted);
-      font-size: 1rem;
+      font-size: 1.02rem;
       margin-bottom: 28px;
-      max-width: 480px;
+      max-width: 500px;
     }
 
     .hero-ctas {
@@ -232,9 +243,9 @@
       display: flex;
       align-items: center;
       gap: 12px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      color: var(--text);
+      font-weight: 500;
+      font-size: 0.92rem;
+      color: var(--text-muted);
     }
 
     .laurel {
@@ -251,15 +262,15 @@
     }
 
     .mock-laptop {
-      background: linear-gradient(145deg, #f0f4fa 0%, #dfe8f4 100%);
-      border-radius: 16px;
+      background: linear-gradient(145deg, #f4f6fb 0%, #e8edf6 100%);
+      border-radius: 22px;
       padding: 12px 12px 20px;
-      box-shadow: 0 24px 48px rgba(0, 89, 209, 0.18), 0 0 0 1px rgba(0, 89, 209, 0.06);
+      box-shadow: 0 20px 50px rgba(74, 111, 212, 0.12), 0 0 0 1px rgba(74, 111, 212, 0.05);
     }
 
     .mock-screen {
       background: #fff;
-      border-radius: 8px;
+      border-radius: 14px;
       overflow: hidden;
       aspect-ratio: 16 / 10;
       padding: 14px;
@@ -277,7 +288,7 @@
       background: #1e293b;
       border-radius: 18px;
       padding: 8px;
-      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 14px 28px rgba(52, 56, 66, 0.18);
     }
 
     .mock-phone-inner {
@@ -291,8 +302,8 @@
 
     .chart-mini {
       height: 70px;
-      background: linear-gradient(180deg, rgba(0, 89, 209, 0.08) 0%, transparent 100%);
-      border-radius: 6px;
+      background: linear-gradient(180deg, rgba(74, 111, 212, 0.07) 0%, transparent 100%);
+      border-radius: 10px;
       position: relative;
     }
 
@@ -303,7 +314,7 @@
       left: 8px;
       right: 8px;
       height: 40px;
-      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 40'%3E%3Cpath d='M0 35 L15 28 L30 32 L45 18 L60 22 L75 8 L100 12 L100 40 L0 40 Z' fill='%230059d1' opacity='0.35'/%3E%3Cpath d='M0 35 L15 28 L30 32 L45 18 L60 22 L75 8 L100 12' stroke='%230059d1' fill='none' stroke-width='2'/%3E%3C/svg%3E") no-repeat center bottom;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 40'%3E%3Cpath d='M0 35 L15 28 L30 32 L45 18 L60 22 L75 8 L100 12 L100 40 L0 40 Z' fill='%234a6fd4' opacity='0.32'/%3E%3Cpath d='M0 35 L15 28 L30 32 L45 18 L60 22 L75 8 L100 12' stroke='%234a6fd4' fill='none' stroke-width='2'/%3E%3C/svg%3E") no-repeat center bottom;
       background-size: 100% auto;
     }
 
@@ -333,14 +344,15 @@
     .mock-stat {
       background: var(--blue-soft);
       padding: 8px 10px;
-      border-radius: 6px;
+      border-radius: 10px;
       color: var(--text);
     }
 
     .mock-stat strong {
       display: block;
       font-size: 0.85rem;
-      color: var(--blue);
+      color: var(--blue-deep);
+      font-weight: 600;
     }
 
     /* Features */
@@ -350,19 +362,20 @@
 
     .section-label {
       text-align: center;
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.15em;
-      color: var(--blue);
-      margin-bottom: 8px;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 10px;
     }
 
     .section-title {
       text-align: center;
-      font-size: clamp(1.35rem, 3vw, 1.75rem);
+      font-size: clamp(1.3rem, 3vw, 1.65rem);
       font-weight: 700;
-      color: var(--blue);
+      color: var(--text);
       margin: 0 0 48px;
+      letter-spacing: 0.02em;
     }
 
     .features-grid {
@@ -392,18 +405,20 @@
       width: 72px;
       height: 72px;
       margin: 0 auto 18px;
-      background: var(--blue-soft);
+      background: linear-gradient(160deg, var(--blue-soft) 0%, #fff 100%);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--blue);
+      color: var(--blue-deep);
+      box-shadow: 0 4px 16px rgba(74, 111, 212, 0.08);
     }
 
     .feature-card h3 {
       font-size: 1rem;
       margin: 0 0 10px;
       font-weight: 700;
+      color: var(--text);
     }
 
     .feature-card p {
@@ -419,16 +434,19 @@
     }
 
     .problem-inner {
-      background: var(--blue-soft);
-      border-radius: 24px;
+      background: linear-gradient(165deg, var(--blue-soft) 0%, #f5f7fc 100%);
+      border-radius: 28px;
       padding: 48px 40px;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
     }
 
     .problem-inner > h2 {
       text-align: center;
-      font-size: 1.35rem;
+      font-size: 1.28rem;
       margin: 0 0 40px;
       font-weight: 700;
+      color: var(--text);
+      letter-spacing: 0.02em;
     }
 
     .problem-flow {
@@ -451,9 +469,9 @@
 
     .pain-card {
       background: var(--white);
-      border-radius: 16px;
+      border-radius: 20px;
       padding: 28px 24px;
-      box-shadow: 0 8px 28px rgba(0, 89, 209, 0.08);
+      box-shadow: 0 12px 36px rgba(52, 56, 66, 0.06);
       width: 100%;
       max-width: 380px;
     }
@@ -482,9 +500,9 @@
       width: 22px;
       height: 22px;
       border-radius: 50%;
-      background: var(--blue);
+      background: linear-gradient(145deg, var(--blue) 0%, #8aaef0 100%);
       color: var(--white);
-      font-size: 12px;
+      font-size: 11px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -492,9 +510,10 @@
     }
 
     .flow-arrow {
-      font-size: 2rem;
+      font-size: 1.75rem;
       color: var(--blue);
-      font-weight: 700;
+      font-weight: 500;
+      opacity: 0.85;
     }
 
     .solution-block {
@@ -502,9 +521,9 @@
     }
 
     .solution-block h3 {
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       margin: 0 0 12px;
-      color: var(--blue);
+      color: var(--text);
     }
 
     .solution-block p {
@@ -523,10 +542,10 @@
     .illus-character {
       width: 180px;
       height: 140px;
-      background: linear-gradient(135deg, rgba(0, 89, 209, 0.08) 0%, rgba(0, 89, 209, 0.02) 100%);
-      border-radius: 16px;
+      background: linear-gradient(135deg, rgba(122, 160, 240, 0.15) 0%, rgba(255, 255, 255, 0.6) 100%);
+      border-radius: 20px;
       position: relative;
-      border: 2px dashed rgba(0, 89, 209, 0.15);
+      border: 2px dashed rgba(74, 111, 212, 0.12);
     }
 
     .illus-character::before {
@@ -543,13 +562,13 @@
       position: absolute;
       bottom: 16px;
       right: 20px;
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       font-weight: 700;
-      color: var(--blue);
+      color: var(--blue-deep);
       background: var(--white);
       padding: 4px 10px;
       border-radius: 999px;
-      border: 2px solid var(--blue);
+      border: 1px solid rgba(74, 111, 212, 0.25);
     }
 
     /* Pricing */
@@ -570,18 +589,18 @@
 
     .price-card {
       background: var(--white);
-      border-radius: 16px;
+      border-radius: 22px;
       padding: 28px 24px 32px;
-      border: 2px solid rgba(0, 89, 209, 0.12);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+      border: 1px solid rgba(74, 111, 212, 0.1);
+      box-shadow: 0 10px 32px rgba(52, 56, 66, 0.05);
       display: flex;
       flex-direction: column;
       position: relative;
     }
 
     .price-card.featured {
-      border-color: var(--blue);
-      box-shadow: 0 16px 40px rgba(0, 89, 209, 0.2);
+      border-color: rgba(74, 111, 212, 0.35);
+      box-shadow: 0 18px 44px rgba(74, 111, 212, 0.14);
       transform: scale(1.02);
     }
 
@@ -590,11 +609,11 @@
       top: -12px;
       left: 50%;
       transform: translateX(-50%);
-      background: var(--blue);
+      background: linear-gradient(135deg, var(--blue) 0%, #6b93ea 100%);
       color: var(--white);
       font-size: 0.7rem;
       font-weight: 700;
-      padding: 6px 14px;
+      padding: 6px 16px;
       border-radius: 999px;
       white-space: nowrap;
     }
@@ -609,7 +628,7 @@
       text-align: center;
       font-size: 1.75rem;
       font-weight: 700;
-      color: var(--blue);
+      color: var(--blue-deep);
       margin-bottom: 20px;
     }
 
@@ -628,7 +647,7 @@
 
     .price-features li {
       padding: 8px 0;
-      border-bottom: 1px solid rgba(0, 89, 209, 0.08);
+      border-bottom: 1px solid rgba(74, 111, 212, 0.07);
       padding-left: 22px;
       position: relative;
     }
@@ -638,7 +657,7 @@
       position: absolute;
       left: 0;
       color: var(--blue);
-      font-weight: 700;
+      font-weight: 600;
     }
 
     .price-card .btn {
@@ -648,8 +667,8 @@
 
     /* Footer CTA */
     .footer-cta {
-      background: var(--blue);
-      padding: 36px 0;
+      background: linear-gradient(120deg, var(--blue-deep) 0%, var(--blue) 48%, #7aa0f0 100%);
+      padding: 40px 0;
       margin-top: 24px;
     }
 
@@ -666,10 +685,10 @@
       width: 100px;
       height: 100px;
       border-radius: 50%;
-      background: var(--white);
-      color: var(--blue);
+      background: rgba(255, 255, 255, 0.95);
+      color: var(--blue-deep);
       font-weight: 700;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -686,14 +705,16 @@
 
     .cta-copy h2 {
       margin: 0 0 8px;
-      font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+      font-size: clamp(1.1rem, 2.5vw, 1.45rem);
       font-weight: 700;
+      letter-spacing: 0.02em;
     }
 
     .cta-copy p {
       margin: 0;
-      font-size: 0.9rem;
-      opacity: 0.95;
+      font-size: 0.92rem;
+      opacity: 0.92;
+      line-height: 1.65;
     }
 
     .footer-cta .btn-yellow {
@@ -701,10 +722,11 @@
     }
 
     .site-footer {
-      padding: 24px;
+      padding: 28px 24px;
       text-align: center;
       font-size: 0.8rem;
       color: var(--text-muted);
+      background: var(--page);
     }
   </style>
 </head>
@@ -732,10 +754,10 @@
   <section class="hero">
     <div class="container hero-grid">
       <div>
-        <p class="hero-kicker">中小企業・個人事業主のための成長支援ツール</p>
+        <p class="hero-kicker">中小企業・個人事業主さま向けの成長支援ツール</p>
         <h1>ビジネスの成長を、もっとシンプルに。</h1>
         <p class="hero-lead">
-          NextGrowは、集客・顧客管理・分析までをひとつに。あなたのビジネスを次のステージへ導きます。
+          集客・顧客管理・分析を、NextGrowひとつでそっとまとめます。日々のムダを減らして、次の一歩に集中できるように。
         </p>
         <div class="hero-ctas">
           <a href="index.html" class="btn btn-primary btn-lg">無料で始める &gt;</a>
@@ -743,7 +765,7 @@
         </div>
         <div class="social-proof">
           <span class="laurel" aria-hidden="true">🌿</span>
-          <span>導入社数 5,000社突破!</span>
+          <span>導入社数 5,000社を突破しました</span>
           <span class="laurel" aria-hidden="true">🌿</span>
         </div>
       </div>
@@ -771,43 +793,43 @@
   </section>
 
   <section class="section" id="features">
-    <p class="section-label">FEATURE</p>
+    <p class="section-label">できること</p>
     <h2 class="section-title">NextGrowでできること</h2>
     <div class="container features-grid">
       <article class="feature-card">
         <div class="feature-icon" aria-hidden="true">
           <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 11c2.2 0 4 1.8 4 4v3H8v-3c0-2.2 1.8-4 4-4z"/><circle cx="16" cy="7" r="3"/></svg>
         </div>
-        <h3>顧客管理をもっと簡単に</h3>
-        <p>連絡先ややり取りを一元管理し、見逃しなくフォローできます。</p>
+        <h3>顧客管理を、すこし楽に</h3>
+        <p>連絡先ややり取りをひとまとめに。気づいたときに、さっとフォローできます。</p>
       </article>
       <article class="feature-card">
         <div class="feature-icon" aria-hidden="true">
           <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20l8-8 4 4 8-8"/><path d="M16 4h8v8"/></svg>
         </div>
-        <h3>集客を自動化・最適化</h3>
-        <p>キャンペーンやフォーム連携で、見込み客の獲得を効率化します。</p>
+        <h3>集客の流れをなめらかに</h3>
+        <p>キャンペーンやフォーム連携で、見込み客との出会いを無理なく育てられます。</p>
       </article>
       <article class="feature-card">
         <div class="feature-icon" aria-hidden="true">
           <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 18V6"/><path d="M10 18V10"/><path d="M16 18v-5"/><path d="M22 18V8"/></svg>
         </div>
-        <h3>データを見える化</h3>
-        <p>売上や顧客動向をグラフで把握し、意思決定を加速します。</p>
+        <h3>数字を、やさしく見える化</h3>
+        <p>売上や顧客の動きをグラフでざっくり把握。次に何をするか、考えやすくなります。</p>
       </article>
       <article class="feature-card">
         <div class="feature-icon" aria-hidden="true">
           <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9c.26.604.852.997 1.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
         </div>
-        <h3>あなたのビジネスに合わせて</h3>
-        <p>規模や業種に応じた設定で、無理なく運用を始められます。</p>
+        <h3>あなたのペースで始められる</h3>
+        <p>規模や業種に合わせて設定できるので、いきなり完璧を目指さなくて大丈夫です。</p>
       </article>
     </div>
   </section>
 
   <section class="problem-section" id="problem">
     <div class="container problem-inner">
-      <h2>こんなお悩みありませんか？</h2>
+      <h2>こんなこと、心当たりありませんか？</h2>
       <div class="problem-flow">
         <div class="pain-card">
           <ul class="pain-list">
@@ -819,9 +841,9 @@
         </div>
         <div class="flow-arrow" aria-hidden="true">→</div>
         <div class="solution-block">
-          <h3>NextGrowがすべて解決します！</h3>
+          <h3>そのあたり、NextGrowにおまかせください</h3>
           <p>
-            直感的な画面で誰でも簡単に操作できます。必要な機能だけをまとめているので、余計な学習コストもかかりません。
+            画面はできるだけシンプルに。必要な機能だけをそろえているので、いきなり難しい操作におびえなくて大丈夫です。
           </p>
           <a href="#" class="btn btn-primary btn-lg">無料で始める &gt;</a>
           <div class="solution-illus">
@@ -833,8 +855,8 @@
   </section>
 
   <section class="section" id="pricing">
-    <p class="section-label">PRICE</p>
-    <h2 class="section-title">シンプルでわかりやすい料金プラン</h2>
+    <p class="section-label">料金</p>
+    <h2 class="section-title">わかりやすい料金プラン</h2>
     <div class="container pricing-grid">
       <div class="price-card">
         <h3>スタータープラン</h3>
@@ -847,7 +869,7 @@
         <a href="index.html" class="btn btn-outline">無料で始める</a>
       </div>
       <div class="price-card featured">
-        <span class="badge-popular">人気No.1</span>
+        <span class="badge-popular">いちばん選ばれています</span>
         <h3>スタンダードプラン</h3>
         <p class="price-amount">¥9,800<span style="font-size:1rem;font-weight:600"> /月</span></p>
         <ul class="price-features">
@@ -873,8 +895,8 @@
   </section>
 
   <section class="section" id="faq" style="padding-top:32px;padding-bottom:32px">
-    <p class="section-label">FAQ</p>
-    <h2 class="section-title" style="margin-bottom:16px">よくある質問</h2>
+    <p class="section-label">サポート</p>
+    <h2 class="section-title" style="margin-bottom:16px">よくあるご質問</h2>
     <div class="container" style="max-width:640px;text-align:center;color:var(--text-muted);font-size:0.9rem">
       <p style="margin:0">ここにアコーディオンや項目を追加できます。</p>
     </div>
@@ -882,10 +904,10 @@
 
   <div class="footer-cta">
     <div class="container footer-cta-inner">
-      <div class="cta-badge">1分で<br>完了!</div>
+      <div class="cta-badge">およそ<br>1分で完了</div>
       <div class="cta-copy">
-        <h2>まずは無料でお試しください</h2>
-        <p>クレジットカードの登録不要。すぐに始められます。</p>
+        <h2>まずは無料から、気軽にどうぞ</h2>
+        <p>クレジットカードの登録は不要です。思い立ったその日から、始められます。</p>
       </div>
       <a href="index.html" class="btn btn-yellow">無料で始める &gt;</a>
     </div>
