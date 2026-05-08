@@ -14,3 +14,10 @@ body {
     color: #fff;
     background-color: #000;
 }
+
+.content-item {
+    background-color: #fff;
+    padding: 16px;
+    margin: 16px;
+    border-radius: 8px;
+}

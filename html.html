@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ja">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,100 +10,112 @@
     <header class="site-header">
       <h1 class="site-title">HTML講座</h1>
     </header>
-    <main>
-      <article>
-        <h1>HTMLの基本</h1>
-        <p>
+    <main class="site-main">
+      <article class="content-article">
+        <h1 class="content-title">HTMLの基本</h1>
+        <p class="content-text">
           HTMLはhyper text markup
           language（ハイパーテキストマークアップランゲージ）の略です。
           HTMLで大事なのはその言葉が表しているものを意味付けすることが大事です。
           見た目を調整するのはCSSに任せましょう。
         </p>
 
-        <p>seo対策のためだったり音声ブラウザの読み上げにも使用されます。</p>
+        <p class="content-text">
+          seo対策のためだったり音声ブラウザの読み上げにも使用されます。
+        </p>
 
-        <section>
-          <h2>見出しタグ h1 ~ h6</h2>
-          <p>h1はページに一つ</p>
+        <section class="content-item">
+          <h2 class="content-item-title">見出しタグ h1 ~ h6</h2>
+          <p class="content-item-text">h1はページに一つ</p>
         </section>
 
-        <section>
-          <h2>pとは</h2>
-          <p>文章、段落を表すタグ</p>
+        <section class="content-item">
+          <h2 class="content-item-title">pとは</h2>
+          <p class="content-item-text">文章、段落を表すタグ</p>
         </section>
 
-        <section>
-          <h2>ul,ol,liとは</h2>
-          <p>リストタグ</p>
+        <section class="content-item">
+          <h2 class="content-item-title">ul,ol,liとは</h2>
+          <p class="content-item-text">リストタグ</p>
 
-          <section>
-            <h3>ul: 順序のないリスト</h3>
-            <ul>
-              <li>メニュー1</li>
-              <li>メニュー2</li>
-              <li>メニュー3</li>
+          <section class="content-sub-item">
+            <h3 class="content-sub-item-title">ul: 順序のないリスト</h3>
+            <ul class="content-list">
+              <li class="content-list-item">メニュー1</li>
+              <li class="content-list-item">メニュー2</li>
+              <li class="content-list-item">メニュー3</li>
             </ul>
           </section>
-          <section>
-            <h3>ol: 順序のあるリスト</h3>
-            <ol>
-              <li>ランキング1</li>
-              <li>ランキング2</li>
-              <li>ランキング3</li>
+          <section class="content-sub-item">
+            <h3 class="content-sub-item-title">ol: 順序のあるリスト</h3>
+            <ol class="content-list">
+              <li class="content-list-item">ランキング1</li>
+              <li class="content-list-item">ランキング2</li>
+              <li class="content-list-item">ランキング3</li>
             </ol>
           </section>
         </section>
 
-        <section>
-          <h2>dl,dt,ddとは</h2>
+        <section class="content-item">
+          <h2 class="content-item-title">dl,dt,ddとは</h2>
 
-          <p>定義付きリスト</p>
-          <dl>
-            <dt>定義リストのタイトル</dt>
-            <dd>定義リストの説明</dd>
-            <dt>定義リストのタイトル</dt>
-            <dd>定義リストの説明</dd>
-            <dd>定義リストの説明</dd>
-            <dt>定義リストのタイトル</dt>
-            <dd>定義リストの説明</dd>
+          <p class="content-item-text">定義付きリスト</p>
+          <dl class="content-definition-list">
+            <dt class="content-definition-title">定義リストのタイトル</dt>
+            <dd class="content-definition-text">定義リストの説明</dd>
+            <dt class="content-definition-title">定義リストのタイトル</dt>
+            <dd class="content-definition-text">定義リストの説明</dd>
+            <dd class="content-definition-text">定義リストの説明</dd>
+            <dt class="content-definition-title">定義リストのタイトル</dt>
+            <dd class="content-definition-text">定義リストの説明</dd>
           </dl>
         </section>
 
-        <section>
-          <h2>em, strong</h2>
-          <p>em: <em>強調</em></p>
-          <p>strong: <strong>重要</strong></p>
-        </section>
-
-        <section>
-          <h2>div,spanとは</h2>
-          <p>div: ブロック要素</p>
-          <p>span: インライン要素</p>
-
-          <div>
-            divの
-            <div>テストです</div>
-          </div>
-          <div>spanの<span>テストです</span></div>
-        </section>
-        <section>
-          <h2>画像を配置するタグ</h2>
-          <p>img: 画像を配置するタグ</p>
-          <p>
-            <img src="https://placehold.co/600x400" alt="画像の説明" />
+        <section class="content-item">
+          <h2 class="content-item-title">em, strong</h2>
+          <p class="content-item-text">
+            em: <em class="content-inline-em">強調</em>
+          </p>
+          <p class="content-item-text">
+            strong: <strong class="content-inline-strong">重要</strong>
           </p>
         </section>
-        <section>
-          <h2>aとは</h2>
-          <p>a: リンクを配置するタグ</p>
-          <p>
-            <a href="https://www.google.com">Google</a>
+
+        <section class="content-item">
+          <h2 class="content-item-title">div,spanとは</h2>
+          <p class="content-item-text">div: ブロック要素</p>
+          <p class="content-item-text">span: インライン要素</p>
+
+          <div class="content-block-example">
+            divの
+            <div class="content-block-example-inner">テストです</div>
+          </div>
+          <div class="content-inline-example">
+            spanの<span class="content-inline-example-text">テストです</span>
+          </div>
+        </section>
+        <section class="content-item">
+          <h2 class="content-item-title">画像を配置するタグ</h2>
+          <p class="content-item-text">img: 画像を配置するタグ</p>
+          <p class="content-item-text">
+            <img
+              class="content-image"
+              src="https://placehold.co/600x400"
+              alt="画像の説明"
+            />
+          </p>
+        </section>
+        <section class="content-item">
+          <h2 class="content-item-title">aとは</h2>
+          <p class="content-item-text">a: リンクを配置するタグ</p>
+          <p class="content-item-text">
+            <a class="content-link" href="https://www.google.com">Google</a>
           </p>
         </section>
       </article>
     </main>
-    <footer>
-      <p>Copyright &copy; 2026 HTML講座</p>
+    <footer class="site-footer">
+      <p class="site-footer-text">Copyright &copy; 2026 HTML講座</p>
     </footer>
   </body>
 </html>
