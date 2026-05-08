@@ -1,5 +1,16 @@
-body{
+body {
     margin: 0;
     padding: 0;
     background-color: #ccc;
+}
+
+.site-header {
+    background-color: #000;
+}
+
+.site-title {
+    margin: 0;
+    padding: 16px;
+    color: #fff;
+    background-color: #000;
 }
