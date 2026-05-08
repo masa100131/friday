@@ -1,27 +1,124 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #ccc;
+    background: linear-gradient(180deg, #f6f7fb 0%, #eef1f7 100%);
+    color: #0f172a;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        "Hiragino Sans", "Noto Sans JP", "Yu Gothic", Meiryo, sans-serif;
+    line-height: 1.7;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 .site-header {
-    background-color: #000;
+    background: #0b1220;
 }
 
 .site-title {
     margin: 0;
     padding: 16px;
     color: #fff;
-    background-color: #000;
+    background: transparent;
+    letter-spacing: 0.02em;
+}
+
+.site-main {
+    padding: 20px 16px 48px;
+}
+
+.content-article {
+    max-width: 880px;
+    margin: 0 auto;
+}
+
+.content-title{
+    margin: 0 0 8px;
+    font-size: 28px;
+    line-height: 1.25;
+    color: #0f172a;
+}
+
+.content-text {
+    margin: 10px 0;
 }
 
 .content-item {
     background-color: #fff;
     padding: 16px;
     margin: 16px;
-    border-radius: 8px;
+    border-radius: 14px;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+    scroll-margin-top: 88px;
 }
 
-.content-title{
-    color: #fff;
+.content-item-title {
+    margin: 0 0 8px;
+    font-size: 20px;
+    line-height: 1.35;
+}
+
+.content-sub-item-title {
+    margin: 10px 0 8px;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.toc {
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+    border-radius: 14px;
+    padding: 14px 16px;
+    margin: 16px;
+    backdrop-filter: blur(10px);
+}
+
+.toc-title {
+    margin: 0 0 8px;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+}
+
+.toc-list,
+.toc-sub-list {
+    margin: 0;
+    padding-left: 18px;
+}
+
+.toc-sub-list {
+    margin-top: 6px;
+}
+
+.toc a {
+    color: #1d4ed8;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(29, 78, 216, 0.22);
+}
+
+.toc a:hover {
+    color: #1e40af;
+    border-bottom-color: rgba(30, 64, 175, 0.5);
+}
+
+.toc a:focus-visible {
+    outline: 3px solid rgba(59, 130, 246, 0.35);
+    outline-offset: 2px;
+    border-radius: 6px;
+}
+
+.content-link {
+    color: #1d4ed8;
+}
+
+.site-footer {
+    padding: 28px 16px;
+    color: rgba(15, 23, 42, 0.7);
+    text-align: center;
+}
+
+.site-footer-text {
+    margin: 0;
 }
