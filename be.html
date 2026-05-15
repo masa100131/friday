@@ -1,744 +1,864 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Masato(S) | Profile</title>
-  <meta name="description" content="Masato(S) のプロフィールページ" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --blue: #4a6fd4;
-      --blue-deep: #3d5fb8;
-      --blue-soft: #eef3fc;
-      --yellow: #ffe566;
-      --text: #343842;
-      --text-muted: #6a6f7a;
-      --white: #ffffff;
-      --page: #faf9f6;
-      --max: 960px;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Masato(S) | Profile</title>
+    <meta name="description" content="Masato(S) のプロフィールページ" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --blue: #4a6fd4;
+        --blue-deep: #3d5fb8;
+        --blue-soft: #eef3fc;
+        --yellow: #ffe566;
+        --text: #343842;
+        --text-muted: #6a6f7a;
+        --white: #ffffff;
+        --page: #faf9f6;
+        --max: 960px;
+      }
 
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-    }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
 
-    html {
-      scroll-behavior: smooth;
-    }
+      html {
+        scroll-behavior: smooth;
+      }
 
-    body {
-      margin: 0;
-      font-family: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", "Yu Gothic UI", system-ui, sans-serif;
-      color: var(--text);
-      line-height: 1.75;
-      background: var(--page);
-    }
+      body {
+        margin: 0;
+        font-family:
+          "Zen Maru Gothic", "Hiragino Maru Gothic ProN", "Yu Gothic UI",
+          system-ui, sans-serif;
+        color: var(--text);
+        line-height: 1.75;
+        background: var(--page);
+      }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
 
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
 
-    .logo-mark img,
-    .avatar-xl img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      max-width: none;
-    }
+      .logo-mark img,
+      .avatar-xl img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        max-width: none;
+      }
 
-    .container {
-      width: min(100% - 48px, var(--max));
-      margin-inline: auto;
-    }
+      .container {
+        width: min(100% - 48px, var(--max));
+        margin-inline: auto;
+      }
 
-    .header {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: rgba(255, 255, 255, 0.88);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(74, 111, 212, 0.06);
-    }
+      .header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: rgba(255, 255, 255, 0.88);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(74, 111, 212, 0.06);
+      }
 
-    .header-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-      padding: 16px 0;
-      flex-wrap: wrap;
-    }
+      .header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        padding: 16px 0;
+        flex-wrap: wrap;
+      }
 
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 700;
-      font-size: 1.2rem;
-      color: var(--blue-deep);
-      letter-spacing: 0.02em;
-    }
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 700;
+        font-size: 1.2rem;
+        color: var(--blue-deep);
+        letter-spacing: 0.02em;
+      }
 
-    .logo-mark {
-      width: 36px;
-      height: 36px;
-      flex-shrink: 0;
-      background: linear-gradient(145deg, var(--blue) 0%, #7aa0f0 100%);
-      border-radius: 12px;
-      overflow: hidden;
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      gap: 22px;
-      flex-wrap: wrap;
-      font-size: 0.9rem;
-      font-weight: 500;
-      color: var(--text-muted);
-    }
-
-    .nav a:hover {
-      color: var(--blue);
-    }
-
-    .header-actions {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
-      padding: 10px 22px;
-      border-radius: 999px;
-      font-weight: 600;
-      font-size: 0.875rem;
-      cursor: pointer;
-      border: 2px solid transparent;
-      transition: transform 0.15s, box-shadow 0.15s, background 0.15s, border-color 0.15s;
-      font-family: inherit;
-    }
-
-    .btn:hover {
-      transform: translateY(-1px);
-    }
-
-    .btn-outline {
-      background: var(--white);
-      border-color: rgba(74, 111, 212, 0.35);
-      color: var(--blue-deep);
-    }
-
-    .btn-outline:hover {
-      background: var(--blue-soft);
-      border-color: rgba(74, 111, 212, 0.2);
-    }
-
-    .btn-primary {
-      background: var(--blue);
-      color: var(--white);
-      border-color: var(--blue);
-    }
-
-    .btn-primary:hover {
-      box-shadow: 0 10px 28px rgba(74, 111, 212, 0.28);
-    }
-
-    .btn-lg {
-      padding: 14px 30px;
-      font-size: 1rem;
-      border-radius: 999px;
-    }
-
-    .btn-yellow {
-      background: var(--yellow);
-      color: var(--text);
-      border-color: transparent;
-      font-weight: 700;
-      font-size: 1rem;
-      padding: 14px 30px;
-      border-radius: 999px;
-    }
-
-    .btn-yellow:hover {
-      box-shadow: 0 10px 28px rgba(255, 200, 80, 0.35);
-    }
-
-    /* Hero */
-    .hero {
-      position: relative;
-      padding: 48px 0 72px;
-      overflow: hidden;
-      background: linear-gradient(180deg, var(--blue-soft) 0%, var(--page) 50%, #fff 100%);
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      width: 700px;
-      height: 700px;
-      right: -200px;
-      top: -150px;
-      background: radial-gradient(circle, rgba(122, 160, 240, 0.2) 0%, transparent 68%);
-      pointer-events: none;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: center;
-      position: relative;
-    }
-
-    @media (max-width: 900px) {
-      .hero-grid {
-        grid-template-columns: 1fr;
+      .logo-mark {
+        width: 36px;
+        height: 36px;
+        flex-shrink: 0;
+        background: linear-gradient(145deg, var(--blue) 0%, #7aa0f0 100%);
+        border-radius: 12px;
+        overflow: hidden;
       }
 
       .nav {
-        display: none;
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        flex-wrap: wrap;
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: var(--text-muted);
+      }
+
+      .nav a:hover {
+        color: var(--blue);
+      }
+
+      .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        padding: 10px 22px;
+        border-radius: 999px;
+        font-weight: 600;
+        font-size: 0.875rem;
+        cursor: pointer;
+        border: 2px solid transparent;
+        transition:
+          transform 0.15s,
+          box-shadow 0.15s,
+          background 0.15s,
+          border-color 0.15s;
+        font-family: inherit;
+      }
+
+      .btn:hover {
+        transform: translateY(-1px);
+      }
+
+      .btn-outline {
+        background: var(--white);
+        border-color: rgba(74, 111, 212, 0.35);
+        color: var(--blue-deep);
+      }
+
+      .btn-outline:hover {
+        background: var(--blue-soft);
+        border-color: rgba(74, 111, 212, 0.2);
+      }
+
+      .btn-primary {
+        background: var(--blue);
+        color: var(--white);
+        border-color: var(--blue);
+      }
+
+      .btn-primary:hover {
+        box-shadow: 0 10px 28px rgba(74, 111, 212, 0.28);
+      }
+
+      .btn-lg {
+        padding: 14px 30px;
+        font-size: 1rem;
+        border-radius: 999px;
+      }
+
+      .btn-yellow {
+        background: var(--yellow);
+        color: var(--text);
+        border-color: transparent;
+        font-weight: 700;
+        font-size: 1rem;
+        padding: 14px 30px;
+        border-radius: 999px;
+      }
+
+      .btn-yellow:hover {
+        box-shadow: 0 10px 28px rgba(255, 200, 80, 0.35);
+      }
+
+      /* Hero */
+      .hero {
+        position: relative;
+        padding: 48px 0 72px;
+        overflow: hidden;
+        background: linear-gradient(
+          180deg,
+          var(--blue-soft) 0%,
+          var(--page) 50%,
+          #fff 100%
+        );
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        width: 700px;
+        height: 700px;
+        right: -200px;
+        top: -150px;
+        background: radial-gradient(
+          circle,
+          rgba(122, 160, 240, 0.2) 0%,
+          transparent 68%
+        );
+        pointer-events: none;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+        position: relative;
+      }
+
+      @media (max-width: 900px) {
+        .hero-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .nav {
+          display: none;
+        }
+
+        .hero-profile-visual {
+          justify-self: center;
+          max-width: 340px;
+        }
+      }
+
+      .hero-kicker {
+        color: var(--blue-deep);
+        font-weight: 500;
+        font-size: 0.9rem;
+        margin-bottom: 12px;
+        letter-spacing: 0.04em;
+      }
+
+      .hero h1 {
+        font-size: clamp(1.75rem, 4vw, 2.4rem);
+        font-weight: 700;
+        line-height: 1.35;
+        margin: 0 0 16px;
+        color: var(--text);
+        letter-spacing: 0.01em;
+      }
+
+      .hero-lead {
+        color: var(--text-muted);
+        font-size: 1.02rem;
+        margin-bottom: 26px;
+        max-width: 440px;
+      }
+
+      .hero-ctas {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-bottom: 24px;
+      }
+
+      .social-proof {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 500;
+        font-size: 0.9rem;
+        color: var(--text-muted);
+      }
+
+      .laurel {
+        font-size: 1.15rem;
+        opacity: 0.85;
       }
 
       .hero-profile-visual {
-        justify-self: center;
-        max-width: 340px;
+        justify-self: end;
+        width: 100%;
+        max-width: 380px;
       }
-    }
 
-    .hero-kicker {
-      color: var(--blue-deep);
-      font-weight: 500;
-      font-size: 0.9rem;
-      margin-bottom: 12px;
-      letter-spacing: 0.04em;
-    }
+      .showcase-card {
+        background: var(--white);
+        border-radius: 24px;
+        padding: 32px 28px;
+        box-shadow:
+          0 20px 50px rgba(74, 111, 212, 0.1),
+          0 0 0 1px rgba(74, 111, 212, 0.06);
+        text-align: center;
+      }
 
-    .hero h1 {
-      font-size: clamp(1.75rem, 4vw, 2.4rem);
-      font-weight: 700;
-      line-height: 1.35;
-      margin: 0 0 16px;
-      color: var(--text);
-      letter-spacing: 0.01em;
-    }
+      .avatar-xl {
+        width: 112px;
+        height: 112px;
+        margin: 0 auto 18px;
+        border-radius: 28px;
+        overflow: hidden;
+        background:
+          radial-gradient(
+            circle at 28% 28%,
+            rgba(255, 255, 255, 0.35),
+            transparent 55%
+          ),
+          linear-gradient(145deg, var(--blue) 0%, #9bb6f5 100%);
+      }
 
-    .hero-lead {
-      color: var(--text-muted);
-      font-size: 1.02rem;
-      margin-bottom: 26px;
-      max-width: 440px;
-    }
+      .showcase-tagline {
+        margin: 0 0 16px;
+        font-size: 0.95rem;
+        color: var(--text-muted);
+        line-height: 1.65;
+      }
 
-    .hero-ctas {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-bottom: 24px;
-    }
+      .showcase-chips {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+      }
 
-    .social-proof {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 500;
-      font-size: 0.9rem;
-      color: var(--text-muted);
-    }
+      /* Sections */
+      .section {
+        padding: 64px 0;
+      }
 
-    .laurel {
-      font-size: 1.15rem;
-      opacity: 0.85;
-    }
+      .section-label {
+        text-align: center;
+        font-size: 0.78rem;
+        font-weight: 500;
+        letter-spacing: 0.08em;
+        color: var(--text-muted);
+        margin-bottom: 10px;
+      }
 
-    .hero-profile-visual {
-      justify-self: end;
-      width: 100%;
-      max-width: 380px;
-    }
+      .section-title {
+        text-align: center;
+        font-size: clamp(1.28rem, 3vw, 1.6rem);
+        font-weight: 700;
+        color: var(--text);
+        margin: 0 0 40px;
+        letter-spacing: 0.02em;
+      }
 
-    .showcase-card {
-      background: var(--white);
-      border-radius: 24px;
-      padding: 32px 28px;
-      box-shadow: 0 20px 50px rgba(74, 111, 212, 0.1), 0 0 0 1px rgba(74, 111, 212, 0.06);
-      text-align: center;
-    }
-
-    .avatar-xl {
-      width: 112px;
-      height: 112px;
-      margin: 0 auto 18px;
-      border-radius: 28px;
-      overflow: hidden;
-      background:
-        radial-gradient(circle at 28% 28%, rgba(255, 255, 255, 0.35), transparent 55%),
-        linear-gradient(145deg, var(--blue) 0%, #9bb6f5 100%);
-    }
-
-    .showcase-tagline {
-      margin: 0 0 16px;
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      line-height: 1.65;
-    }
-
-    .showcase-chips {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 8px;
-    }
-
-    /* Sections */
-    .section {
-      padding: 64px 0;
-    }
-
-    .section-label {
-      text-align: center;
-      font-size: 0.78rem;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      color: var(--text-muted);
-      margin-bottom: 10px;
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: clamp(1.28rem, 3vw, 1.6rem);
-      font-weight: 700;
-      color: var(--text);
-      margin: 0 0 40px;
-      letter-spacing: 0.02em;
-    }
-
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-    }
-
-    @media (max-width: 900px) {
       .features-grid {
-        grid-template-columns: repeat(2, 1fr);
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
       }
-    }
 
-    @media (max-width: 520px) {
-      .features-grid {
-        grid-template-columns: 1fr;
+      @media (max-width: 900px) {
+        .features-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
       }
-    }
 
-    .feature-card {
-      text-align: center;
-      padding: 12px 8px;
-    }
+      @media (max-width: 520px) {
+        .features-grid {
+          grid-template-columns: 1fr;
+        }
+      }
 
-    .feature-icon {
-      width: 72px;
-      height: 72px;
-      margin: 0 auto 16px;
-      background: linear-gradient(160deg, var(--blue-soft) 0%, #fff 100%);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--blue-deep);
-      box-shadow: 0 4px 16px rgba(74, 111, 212, 0.08);
-      font-size: 1.75rem;
-    }
+      .feature-card {
+        text-align: center;
+        padding: 12px 8px;
+      }
 
-    .feature-card h3 {
-      font-size: 1rem;
-      margin: 0 0 8px;
-      font-weight: 700;
-      color: var(--text);
-    }
+      .feature-icon {
+        width: 72px;
+        height: 72px;
+        margin: 0 auto 16px;
+        background: linear-gradient(160deg, var(--blue-soft) 0%, #fff 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--blue-deep);
+        box-shadow: 0 4px 16px rgba(74, 111, 212, 0.08);
+        font-size: 1.75rem;
+      }
 
-    .feature-card p {
-      margin: 0;
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      line-height: 1.65;
-    }
+      .feature-card h3 {
+        font-size: 1rem;
+        margin: 0 0 8px;
+        font-weight: 700;
+        color: var(--text);
+      }
 
-    /* About */
-    .about-section {
-      padding: 0 0 64px;
-    }
+      .feature-card p {
+        margin: 0;
+        font-size: 0.88rem;
+        color: var(--text-muted);
+        line-height: 1.65;
+      }
 
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-      align-items: start;
-    }
+      /* About */
+      .about-section {
+        padding: 0 0 64px;
+      }
 
-    @media (max-width: 800px) {
       .about-grid {
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        align-items: start;
       }
-    }
 
-    .profile-panel {
-      background: var(--white);
-      border-radius: 22px;
-      padding: 28px 26px;
-      border: 1px solid rgba(74, 111, 212, 0.08);
-      box-shadow: 0 10px 32px rgba(52, 56, 66, 0.05);
-    }
+      @media (max-width: 800px) {
+        .about-grid {
+          grid-template-columns: 1fr;
+        }
+      }
 
-    .profile-panel h3 {
-      margin: 0 0 18px;
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: var(--text);
-    }
+      .profile-panel {
+        background: var(--white);
+        border-radius: 22px;
+        padding: 28px 26px;
+        border: 1px solid rgba(74, 111, 212, 0.08);
+        box-shadow: 0 10px 32px rgba(52, 56, 66, 0.05);
+      }
 
-    .profile-kv {
-      display: grid;
-      grid-template-columns: 100px 1fr;
-      gap: 10px 14px;
-      font-size: 0.92rem;
-      margin: 0;
-    }
+      .profile-panel h3 {
+        margin: 0 0 18px;
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--text);
+      }
 
-    .profile-kv dt {
-      color: var(--text-muted);
-      font-weight: 500;
-    }
+      .profile-kv {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        gap: 10px 14px;
+        font-size: 0.92rem;
+        margin: 0;
+      }
 
-    .profile-kv dd {
-      margin: 0;
-      color: var(--text);
-      font-weight: 600;
-    }
+      .profile-kv dt {
+        color: var(--text-muted);
+        font-weight: 500;
+      }
 
-    .profile-note {
-      margin: 18px 0 0;
-      font-size: 0.88rem;
-      color: var(--text-muted);
-    }
+      .profile-kv dd {
+        margin: 0;
+        color: var(--text);
+        font-weight: 600;
+      }
 
-    .about-prose {
-      margin: 0;
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      line-height: 1.8;
-    }
+      .profile-note {
+        margin: 18px 0 0;
+        font-size: 0.88rem;
+        color: var(--text-muted);
+      }
 
-    /* Artists band */
-    .music-section {
-      padding: 56px 0 72px;
-    }
+      .about-prose {
+        margin: 0;
+        font-size: 0.95rem;
+        color: var(--text-muted);
+        line-height: 1.8;
+      }
 
-    .music-inner {
-      background: linear-gradient(165deg, var(--blue-soft) 0%, #f5f7fc 100%);
-      border-radius: 28px;
-      padding: 44px 36px 48px;
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
-    }
+      /* Artists band */
+      .music-section {
+        padding: 56px 0 72px;
+      }
 
-    .music-inner > h2 {
-      text-align: center;
-      font-size: 1.22rem;
-      margin: 0 0 8px;
-      font-weight: 700;
-      color: var(--text);
-    }
+      .music-inner {
+        background: linear-gradient(165deg, var(--blue-soft) 0%, #f5f7fc 100%);
+        border-radius: 28px;
+        padding: 44px 36px 48px;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+      }
 
-    .music-inner > p.sub {
-      text-align: center;
-      margin: 0 0 28px;
-      font-size: 0.9rem;
-      color: var(--text-muted);
-    }
+      .music-inner > h2 {
+        text-align: center;
+        font-size: 1.22rem;
+        margin: 0 0 8px;
+        font-weight: 700;
+        color: var(--text);
+      }
 
-    .chip {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 14px;
-      border-radius: 999px;
-      background: var(--white);
-      border: 1px solid rgba(74, 111, 212, 0.12);
-      font-size: 0.88rem;
-      font-weight: 600;
-      color: var(--text);
-      box-shadow: 0 2px 10px rgba(52, 56, 66, 0.04);
-    }
+      .music-inner > p.sub {
+        text-align: center;
+        margin: 0 0 28px;
+        font-size: 0.9rem;
+        color: var(--text-muted);
+      }
 
-    .chip-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: linear-gradient(145deg, var(--blue) 0%, #8aaef0 100%);
-      flex-shrink: 0;
-    }
+      .chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 14px;
+        border-radius: 999px;
+        background: var(--white);
+        border: 1px solid rgba(74, 111, 212, 0.12);
+        font-size: 0.88rem;
+        font-weight: 600;
+        color: var(--text);
+        box-shadow: 0 2px 10px rgba(52, 56, 66, 0.04);
+      }
 
-    .chip--logo {
-      padding: 6px 12px;
-    }
+      .chip-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: linear-gradient(145deg, var(--blue) 0%, #8aaef0 100%);
+        flex-shrink: 0;
+      }
 
-    .chip--logo img {
-      max-height: 26px;
-      max-width: 84px;
-      width: auto;
-      height: auto;
-      object-fit: contain;
-      display: block;
-    }
+      .chip--logo {
+        padding: 6px 12px;
+      }
 
-    .artist-logos {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 14px;
-      align-items: center;
-    }
+      .chip--logo img {
+        max-height: 26px;
+        max-width: 84px;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        display: block;
+      }
 
-    .artist-logo {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      height: 56px;
-      min-width: 80px;
-      max-width: 160px;
-      padding: 8px 16px;
-      border-radius: 14px;
-      background: var(--white);
-      border: 1px solid rgba(74, 111, 212, 0.12);
-      box-shadow: 0 2px 10px rgba(52, 56, 66, 0.04);
-    }
+      .artist-logos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px;
+        align-items: center;
+      }
 
-    .artist-logo img {
-      max-height: 38px;
-      max-width: 136px;
-      width: auto;
-      height: auto;
-      object-fit: contain;
-      display: block;
-    }
+      .artist-logo {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 56px;
+        min-width: 80px;
+        max-width: 160px;
+        padding: 8px 16px;
+        border-radius: 14px;
+        background: var(--white);
+        border: 1px solid rgba(74, 111, 212, 0.12);
+        box-shadow: 0 2px 10px rgba(52, 56, 66, 0.04);
+      }
 
-    /* Footer CTA */
-    .footer-cta {
-      background: linear-gradient(120deg, var(--blue-deep) 0%, var(--blue) 48%, #7aa0f0 100%);
-      padding: 40px 0;
-      margin-top: 8px;
-    }
+      .artist-logo img {
+        max-height: 38px;
+        max-width: 136px;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        display: block;
+      }
 
-    .footer-cta-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-      flex-wrap: wrap;
-    }
+      /* Footer CTA */
+      .footer-cta {
+        background: linear-gradient(
+          120deg,
+          var(--blue-deep) 0%,
+          var(--blue) 48%,
+          #7aa0f0 100%
+        );
+        padding: 40px 0;
+        margin-top: 8px;
+      }
 
-    .cta-badge {
-      flex-shrink: 0;
-      width: 96px;
-      height: 96px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.95);
-      color: var(--blue-deep);
-      font-weight: 700;
-      font-size: 0.78rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      line-height: 1.35;
-      padding: 10px;
-    }
+      .footer-cta-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        flex-wrap: wrap;
+      }
 
-    .cta-copy {
-      flex: 1;
-      min-width: 200px;
-      color: var(--white);
-    }
+      .cta-badge {
+        flex-shrink: 0;
+        width: 96px;
+        height: 96px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.95);
+        color: var(--blue-deep);
+        font-weight: 700;
+        font-size: 0.78rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        line-height: 1.35;
+        padding: 10px;
+      }
 
-    .cta-copy h2 {
-      margin: 0 0 8px;
-      font-size: clamp(1.08rem, 2.5vw, 1.4rem);
-      font-weight: 700;
-      letter-spacing: 0.02em;
-    }
+      .cta-copy {
+        flex: 1;
+        min-width: 200px;
+        color: var(--white);
+      }
 
-    .cta-copy p {
-      margin: 0;
-      font-size: 0.9rem;
-      opacity: 0.92;
-      line-height: 1.65;
-    }
+      .cta-copy h2 {
+        margin: 0 0 8px;
+        font-size: clamp(1.08rem, 2.5vw, 1.4rem);
+        font-weight: 700;
+        letter-spacing: 0.02em;
+      }
 
-    .footer-cta .btn-yellow {
-      flex-shrink: 0;
-    }
+      .cta-copy p {
+        margin: 0;
+        font-size: 0.9rem;
+        opacity: 0.92;
+        line-height: 1.65;
+      }
 
-    .site-footer {
-      padding: 28px 24px;
-      text-align: center;
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      background: var(--page);
-    }
-  </style>
-</head>
-<body>
-  <header class="header">
-    <div class="container header-inner">
-      <a href="#top" class="logo">
-        <span class="logo-mark"><img src="images/profile.jpg" width="72" height="72" alt="" decoding="async" /></span>
-        Masato(S)
-      </a>
-      <nav class="nav" aria-label="ページ内">
-        <a href="#about">自己紹介</a>
-        <a href="#likes">好きなこと</a>
-        <a href="#artists">アーティスト</a>
-      </nav>
-      <div class="header-actions">
-        <a href="index.html" class="btn btn-outline">コンパクト表示</a>
-      </div>
-    </div>
-  </header>
+      .footer-cta .btn-yellow {
+        flex-shrink: 0;
+      }
 
-  <section class="hero" id="top">
-    <div class="container hero-grid">
-      <div>
-        <p class="hero-kicker">プロフィール</p>
-        <h1>Masato(S)</h1>
-        <p class="hero-lead">
-          音楽と猫に癒される日々。好きなものを大事に、ゆるっと楽しく過ごしています。
-        </p>
-        <div class="hero-ctas">
-          <a href="#artists" class="btn btn-primary btn-lg">好きな音楽を見る</a>
-          <a href="index.html" class="btn btn-outline btn-lg">別レイアウトで見る</a>
-        </div>
-        <div class="social-proof">
-          <span class="laurel" aria-hidden="true">🐱</span>
-          <span>猫は 12 匹と暮らしています</span>
-          <span class="laurel" aria-hidden="true">🎵</span>
+      .site-footer {
+        padding: 28px 24px;
+        text-align: center;
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        background: var(--page);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-inner">
+        <a href="#top" class="logo">
+          <span class="logo-mark"
+            ><img
+              src="images/profile.jpg"
+              width="72"
+              height="72"
+              alt=""
+              decoding="async"
+          /></span>
+          Masato(S)
+        </a>
+        <nav class="nav" aria-label="ページ内">
+          <a href="#about">自己紹介</a>
+          <a href="#likes">好きなこと</a>
+          <a href="#artists">アーティスト</a>
+        </nav>
+        <div class="header-actions">
+          <a href="index.html" class="btn btn-outline">コンパクト表示</a>
         </div>
       </div>
-      <div class="hero-profile-visual">
-        <div class="showcase-card">
-          <div class="avatar-xl">
-            <img src="images/profile.jpg" width="224" height="224" alt="Masato(S)" decoding="async" />
+    </header>
+
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div>
+          <p class="hero-kicker">プロフィール</p>
+          <h1>Masato(S)</h1>
+          <p class="hero-lead">
+            音楽と猫に癒される日々。好きなものを大事に、ゆるっと楽しく過ごしています。
+          </p>
+          <div class="hero-ctas">
+            <a href="#artists" class="btn btn-primary btn-lg"
+              >好きな音楽を見る</a
+            >
+            <a href="index.html" class="btn btn-outline btn-lg"
+              >別レイアウトで見る</a
+            >
           </div>
-          <p class="showcase-tagline">気分で聴く曲が変わるタイプ。<br>おすすめもいつでも歓迎です。</p>
-          <div class="showcase-chips">
-            <span class="chip chip--logo"><img src="images/artists/bz.png" width="160" height="48" alt="B'z" loading="lazy" decoding="async" /></span>
-            <span class="chip"><span class="chip-dot" aria-hidden="true"></span>猫</span>
-            <span class="chip"><span class="chip-dot" aria-hidden="true"></span>音楽</span>
+          <div class="social-proof">
+            <span class="laurel" aria-hidden="true">🐱</span>
+            <span>猫は 12 匹と暮らしています</span>
+            <span class="laurel" aria-hidden="true">🎵</span>
+          </div>
+        </div>
+        <div class="hero-profile-visual">
+          <div class="showcase-card">
+            <div class="avatar-xl">
+              <img
+                src="images/profile.jpg"
+                width="224"
+                height="224"
+                alt="Masato(S)"
+                decoding="async"
+              />
+            </div>
+            <p class="showcase-tagline">
+              気分で聴く曲が変わるタイプ。<br />おすすめもいつでも歓迎です。
+            </p>
+            <div class="showcase-chips">
+              <span class="chip chip--logo"
+                ><img
+                  src="images/artists/bz.png"
+                  width="160"
+                  height="48"
+                  alt="B'z"
+                  loading="lazy"
+                  decoding="async"
+              /></span>
+              <span class="chip"
+                ><span class="chip-dot" aria-hidden="true"></span>猫</span
+              >
+              <span class="chip"
+                ><span class="chip-dot" aria-hidden="true"></span>音楽</span
+              >
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section" id="likes">
-    <p class="section-label">日常のなかで</p>
-    <h2 class="section-title">大切にしていること</h2>
-    <div class="container features-grid">
-      <article class="feature-card">
-        <div class="feature-icon" aria-hidden="true">🎧</div>
-        <h3>音楽を聴く時間</h3>
-        <p>通勤や作業の合間に、気分に合わせてプレイリストを組み替えたりしています。</p>
-      </article>
-      <article class="feature-card">
-        <div class="feature-icon" aria-hidden="true">🐈</div>
-        <h3>猫たちとの暮らし</h3>
-        <p>にぎやかな家のなかで、ふとした寝顔にほっとする瞬間がたくさんあります。</p>
-      </article>
-      <article class="feature-card">
-        <div class="feature-icon" aria-hidden="true">☕</div>
-        <h3>ゆるいペースで</h3>
-        <p>完璧より続くことを意識して、無理のないリズムで日々を重ねています。</p>
-      </article>
-      <article class="feature-card">
-        <div class="feature-icon" aria-hidden="true">✨</div>
-        <h3>小さな楽しみ</h3>
-        <p>新しい一曲との出会いや、ふとした発見を大切にしたいと思っています。</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="about-section" id="about">
-    <p class="section-label">プロフィール</p>
-    <h2 class="section-title">少しだけ、わたしのこと</h2>
-    <div class="container about-grid">
-      <div class="profile-panel">
-        <h3>基本情報</h3>
-        <dl class="profile-kv">
-          <dt>名前</dt>
-          <dd>Masato(S)</dd>
-          <dt>趣味</dt>
-          <dd>音楽鑑賞</dd>
-          <dt>好きな動物</dt>
-          <dd>猫（12 匹飼い）</dd>
-        </dl>
-        <p class="profile-note">このページは HTML と CSS だけで作っています。</p>
+    <section class="section" id="likes">
+      <p class="section-label">日常のなかで</p>
+      <h2 class="section-title">大切にしていること</h2>
+      <div class="container features-grid">
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">🎧</div>
+          <h3>音楽を聴く時間</h3>
+          <p>
+            通勤や作業の合間に、気分に合わせてプレイリストを組み替えたりしています。
+          </p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">🐈</div>
+          <h3>猫たちとの暮らし</h3>
+          <p>
+            にぎやかな家のなかで、ふとした寝顔にほっとする瞬間がたくさんあります。
+          </p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">☕</div>
+          <h3>ゆるいペースで</h3>
+          <p>
+            完璧より続くことを意識して、無理のないリズムで日々を重ねています。
+          </p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">✨</div>
+          <h3>小さな楽しみ</h3>
+          <p>
+            新しい一曲との出会いや、ふとした発見を大切にしたいと思っています。
+          </p>
+        </article>
       </div>
-      <div class="profile-panel">
-        <h3>ひとこと</h3>
-        <p class="about-prose">
-          プロフィールを「やわらかい雰囲気」のまま、ひとつのページとしてまとめました。仕事用の自己紹介というより、気軽に読んでもらえる自己紹介をイメージしています。内容はいつでも差し替え可能です。
-        </p>
+    </section>
+
+    <section class="about-section" id="about">
+      <p class="section-label">プロフィール</p>
+      <h2 class="section-title">少しだけ、わたしのこと</h2>
+      <div class="container about-grid">
+        <div class="profile-panel">
+          <h3>基本情報</h3>
+          <dl class="profile-kv">
+            <dt>名前</dt>
+            <dd>Masato(S)</dd>
+            <dt>趣味</dt>
+            <dd>音楽鑑賞</dd>
+            <dt>好きな動物</dt>
+            <dd>猫（12 匹飼い）</dd>
+          </dl>
+          <p class="profile-note">
+            このページは HTML と CSS だけで作っています。
+          </p>
+        </div>
+        <div class="profile-panel">
+          <h3>ひとこと</h3>
+          <p class="about-prose">
+            プロフィールを「やわらかい雰囲気」のまま、ひとつのページとしてまとめました。仕事用の自己紹介というより、気軽に読んでもらえる自己紹介をイメージしています。内容はいつでも差し替え可能です。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="music-section" id="artists">
+      <div class="container music-inner">
+        <h2>好きなアーティスト</h2>
+        <p class="sub">気分で聴く曲が変わるタイプ。おすすめも歓迎です。</p>
+        <div
+          class="artist-logos"
+          role="list"
+          aria-label="好きなアーティスト（ロゴ）"
+        >
+          <div class="artist-logo" role="listitem">
+            <img
+              src="images/artists/bz.png"
+              width="200"
+              height="64"
+              alt="B'z"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="artist-logo" role="listitem">
+            <img
+              src="images/artists/sakanaction.png"
+              width="200"
+              height="64"
+              alt="サカナクション"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="artist-logo" role="listitem">
+            <img
+              src="images/artists/ryokuoushoku.png"
+              width="200"
+              height="64"
+              alt="緑黄色社会"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="artist-logo" role="listitem">
+            <img
+              src="images/artists/mrs_green_apple.png"
+              width="200"
+              height="64"
+              alt="Mrs. GREEN APPLE"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="artist-logo" role="listitem">
+            <img
+              src="images/artists/tomoo.png"
+              width="200"
+              height="64"
+              alt="TOMOO"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer-cta">
+      <div class="container footer-cta-inner">
+        <div class="cta-badge">別の<br />見え方</div>
+        <div class="cta-copy">
+          <h2>ダークテーマのコンパクト版</h2>
+          <p>
+            同じ内容を、ガラス風のカード一枚にまとめたレイアウトもあります。
+          </p>
+        </div>
+        <a href="index.html" class="btn btn-yellow">index.html を開く</a>
       </div>
     </div>
-  </section>
 
-  <section class="music-section" id="artists">
-    <div class="container music-inner">
-      <h2>好きなアーティスト</h2>
-      <p class="sub">気分で聴く曲が変わるタイプ。おすすめも歓迎です。</p>
-      <div class="artist-logos" role="list" aria-label="好きなアーティスト（ロゴ）">
-        <div class="artist-logo" role="listitem"><img src="images/artists/bz.png" width="200" height="64" alt="B'z" loading="lazy" decoding="async" /></div>
-        <div class="artist-logo" role="listitem"><img src="images/artists/sakanaction.png" width="200" height="64" alt="サカナクション" loading="lazy" decoding="async" /></div>
-        <div class="artist-logo" role="listitem"><img src="images/artists/ryokuoushoku.png" width="200" height="64" alt="緑黄色社会" loading="lazy" decoding="async" /></div>
-        <div class="artist-logo" role="listitem"><img src="images/artists/mrs_green_apple.png" width="200" height="64" alt="Mrs. GREEN APPLE" loading="lazy" decoding="async" /></div>
-        <div class="artist-logo" role="listitem"><img src="images/artists/tomoo.png" width="200" height="64" alt="TOMOO" loading="lazy" decoding="async" /></div>
-      </div>
-    </div>
-  </section>
+    <footer class="site-footer">
+      <p>© <span id="y"></span> Masato(S) · Made with simple HTML/CSS</p>
+    </footer>
 
-  <div class="footer-cta">
-    <div class="container footer-cta-inner">
-      <div class="cta-badge">別の<br>見え方</div>
-      <div class="cta-copy">
-        <h2>ダークテーマのコンパクト版</h2>
-        <p>同じ内容を、ガラス風のカード一枚にまとめたレイアウトもあります。</p>
-      </div>
-      <a href="index.html" class="btn btn-yellow">index.html を開く</a>
-    </div>
-  </div>
-
-  <footer class="site-footer">
-    <p>© <span id="y"></span> Masato(S) · Made with simple HTML/CSS</p>
-  </footer>
-
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
-</body>
+    <script>
+      document.getElementById("y").textContent = new Date().getFullYear();
+    </script>
+  </body>
 </html>
-
