@@ -4,6 +4,8 @@ body {
     background-color: #ccc;
 }
 
+* {}
+
 .site-header {
     background-color: #000;
 }
@@ -61,4 +63,57 @@ body {
     width: 100px;
     padding: 10px;
     border: 10px solid red;
+}
+
+.box.border-box {
+    box-sizing: border-box;
+}
+
+.box.margin-auto {
+    margin: 0 auto;
+}
+
+.box.position-relative {
+    position: relative;
+    top: -50px;
+    left: -50px;
+}
+
+.box.position-absolute {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    border-color: blue;
+    margin: 0;
+}
+
+.box.position-fixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    border-color: green;
+    margin: 0;
+}
+
+.box-container-wrapper {
+    position: relative;
+    padding: 16px;
+    border: 2px solid blue;
+    background-color: #888;
+}
+
+.box-container {
+    background-color: #ccc;
+    height: 100px;
+    border: 2px solid red;
+    position: relative;
+    padding: 16px;
+    margin: 16px;
+    border-radius: 8px;
+
+    .box {
+        top: 0;
+        left: 0;
+        border-color: yellow;
+    }
 }
