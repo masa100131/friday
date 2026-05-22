@@ -226,3 +226,42 @@ body {
         height: 100px;
     }
 }
+.entry {
+    display: grid;
+    grid-template:
+        "image title" auto
+        "image description" 1fr
+        "image btn" auto / 40% 1fr;
+    column-gap: 16px;
+    row-gap: 8px;
+
+    .entry-image {
+        margin: 0;
+        padding: 0;
+        grid-area: image;
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .entry-title {
+        margin: 0;
+        padding: 0;
+        grid-area: title;
+    }
+
+    .entry-description {
+        margin: 0;
+        padding: 0;
+        grid-area: description;
+    }
+
+    .entry-btn {
+        margin: 0;
+        padding: 0;
+        grid-area: btn;
+    }
+}
