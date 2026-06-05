@@ -42,7 +42,7 @@
     </nav>
 
     <main>
-      <section>
+      <section aria-label="メインビジュアル">
         <h2>Xeory Extension</h2>
         <p>
           Xeory
@@ -50,8 +50,8 @@
         </p>
       </section>
 
-      <section>
-        <h2>人気のある記事</h2>
+      <section aria-labelledby="popular-posts-heading">
+        <h2 id="popular-posts-heading">人気のある記事</h2>
 
         <article>
           <a href="https://xeory.jp/extension/demo-top">
@@ -124,8 +124,8 @@
         </article>
       </section>
 
-      <section>
-        <h2>最近の投稿</h2>
+      <section aria-labelledby="recent-posts-heading">
+        <h2 id="recent-posts-heading">最近の投稿</h2>
 
         <article>
           <a href="https://xeory.jp/extension/demo-top">
@@ -198,13 +198,15 @@
         </article>
       </section>
 
-      <section>
-        <h2>XeoryExtensionの特徴</h2>
-        <p>feature</p>
+      <section aria-labelledby="features-heading">
+        <header>
+          <h2 id="features-heading">XeoryExtensionの特徴</h2>
+          <p>feature</p>
+        </header>
 
-        <section>
+        <section aria-labelledby="feature-1-heading">
           <p>1</p>
-          <h3>モバイルレスポンシブ</h3>
+          <h3 id="feature-1-heading">モバイルレスポンシブ</h3>
           <p>Mobile Responsive</p>
           <img
             src="https://xeory.jp/extension/wp-content/uploads/sites/4/2014/10/macbook-at-the-coffee-shop.jpg"
@@ -219,9 +221,9 @@
           <p><a href="#">詳しく見る</a></p>
         </section>
 
-        <section>
+        <section aria-labelledby="feature-2-heading">
           <p>2</p>
-          <h3>HTML5デザイン</h3>
+          <h3 id="feature-2-heading">HTML5デザイン</h3>
           <p>HTML5 Design</p>
           <img
             src="https://xeory.jp/extension/wp-content/uploads/sites/4/2014/10/two-coffee-at-the-shop.jpg"
@@ -236,9 +238,9 @@
           <p><a href="#">詳しく見る</a></p>
         </section>
 
-        <section>
+        <section aria-labelledby="feature-3-heading">
           <p>3</p>
-          <h3>SEO最適化</h3>
+          <h3 id="feature-3-heading">SEO最適化</h3>
           <p>Search Engine Optimized</p>
           <img
             src="https://xeory.jp/extension/wp-content/uploads/sites/4/2014/10/imac-glasses-desk.jpg"
@@ -253,9 +255,9 @@
           <p><a href="#">詳しく見る</a></p>
         </section>
 
-        <section>
+        <section aria-labelledby="feature-4-heading">
           <p>4</p>
-          <h3>高いカスタマイズ性</h3>
+          <h3 id="feature-4-heading">高いカスタマイズ性</h3>
           <p>Customizable</p>
           <img
             src="https://xeory.jp/extension/wp-content/uploads/sites/4/2014/10/macbook-holding.png"
@@ -271,12 +273,14 @@
         </section>
       </section>
 
-      <section>
-        <h2>サービス紹介</h2>
-        <p>service</p>
+      <section aria-labelledby="service-heading">
+        <header>
+          <h2 id="service-heading">サービス紹介</h2>
+          <p>service</p>
+        </header>
 
-        <section>
-          <h3>Xeoryカスタマイズ</h3>
+        <section aria-labelledby="service-1-heading">
+          <h3 id="service-1-heading">Xeoryカスタマイズ</h3>
           <p>Xeory Customize</p>
           <p>
             <a href="https://xeory.jp/design-examples/"
@@ -285,8 +289,8 @@
           </p>
         </section>
 
-        <section>
-          <h3>コンテンツマーケティング</h3>
+        <section aria-labelledby="service-2-heading">
+          <h3 id="service-2-heading">コンテンツマーケティング</h3>
           <p>Content Marketing</p>
           <p>
             <a href="https://lucy.ne.jp/bazubu/case"
@@ -296,9 +300,11 @@
         </section>
       </section>
 
-      <section>
-        <h2>会社紹介</h2>
-        <p>company</p>
+      <section aria-labelledby="company-heading">
+        <header>
+          <h2 id="company-heading">会社紹介</h2>
+          <p>company</p>
+        </header>
 
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1620.7796881577704!2d139.75435173906598!3d35.663226172331214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bc1d762181d%3A0xa40a7b5e920a170e!2z44CSMTA1LTAwMDQg5p2x5Lqs6YO95riv5Yy65paw5qmL77yV5LiB55uu77yR77yQ4oiS77yVIERhaXdh5paw5qmLNTEw44OT44Or!5e0!3m2!1sja!2sjp!4v1742957587639!5m2!1sja!2sjp"
@@ -319,9 +325,11 @@
         </dl>
       </section>
 
-      <section>
-        <h2>お問い合わせ</h2>
-        <p>inquiry</p>
+      <section aria-labelledby="contact-heading">
+        <header>
+          <h2 id="contact-heading">お問い合わせ</h2>
+          <p>inquiry</p>
+        </header>
 
         <form action="#" method="post">
           <p>
@@ -351,56 +359,56 @@
     </main>
 
     <footer>
-      <p><a href="https://xeory.jp/extension">XeoryExtension</a></p>
+      <p>XeoryExtension</p>
 
       <nav aria-label="フッターメニュー">
-        <section>
-          <h2>メニュー</h2>
-          <ul>
-            <li>
-              <a href="https://xeory.jp/extension/sample">記事ページサンプル</a>
-            </li>
-            <li>
-              <a href="https://xeory.jp/template/xeory-extension/"
-                >Extensionをダウンロード</a
-              >
-            </li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>ソーシャルメディア</h2>
-          <ul>
-            <li>
-              <a href="https://x.com/@BAZUBU" target="_blank" rel="noopener"
-                >X</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.facebook.com/BazuBu"
-                target="_blank"
-                rel="noopener"
-                >Facebook</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://feedly.com/i/subscription/feed/https://xeory.jp/extension/feed"
-                target="_blank"
-                rel="noopener"
-                >Feedly</a
-              >
-            </li>
-          </ul>
-        </section>
+        <h2>メニュー</h2>
+        <ul>
+          <li>
+            <a href="https://xeory.jp/extension/sample">記事ページサンプル</a>
+          </li>
+          <li>
+            <a href="https://xeory.jp/template/xeory-extension/"
+              >Extensionをダウンロード</a
+            >
+          </li>
+        </ul>
       </nav>
 
-      <blockquote cite="https://www.facebook.com/BazuBu">
-        <a href="https://www.facebook.com/BazuBu">Facebook</a>
-      </blockquote>
+      <nav aria-label="ソーシャルメディア">
+        <h2>ソーシャルメディア</h2>
+        <ul>
+          <li>
+            <a href="https://x.com/@BAZUBU" target="_blank" rel="noopener">X</a>
+          </li>
+          <li>
+            <a
+              href="https://www.facebook.com/BazuBu"
+              target="_blank"
+              rel="noopener"
+              >Facebook</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://feedly.com/i/subscription/feed/https://xeory.jp/extension/feed"
+              target="_blank"
+              rel="noopener"
+              >Feedly</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <aside aria-label="Facebook">
+        <blockquote cite="https://www.facebook.com/BazuBu">
+          <a href="https://www.facebook.com/BazuBu">Facebook</a>
+        </blockquote>
+      </aside>
 
       <p>© Copyright 2026 XeoryExtension. All rights reserved.</p>
     </footer>
+
+    <a href="#">ページトップへ</a>
   </body>
 </html>
