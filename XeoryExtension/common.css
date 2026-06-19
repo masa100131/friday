@@ -1,3 +1,90 @@
 body {
     background-color: #ccc;
+    margin: 0;
+    font-family:
+        "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans",
+        Meiryo, sans-serif;
+}
+
+.site-header {
+    background-color: #47b39d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+}
+
+.site-title {
+    margin: 0;
+    padding: 16px;
+    color: #fff;
+    font-size: 18px;
+}
+
+.nav-list-title {
+    display: none;
+}
+
+.site-nav-list {
+    margin: 0;
+    padding: 0 16px;
+    gap: 16px;
+    display: flex;
+}
+
+.nav-list-item {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    & a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        line-height: 90px;
+        padding: 0 16px;
+        transition: background-color 0.2s;
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+    }
+}
+
+.content-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #42a994;
+    color: #fff;
+    text-align: center;
+    height: 500px;
+}
+
+.content-title {
+    margin: 0 0 24px;
+    color: #fff;
+    font-size: 42px;
+    font-weight: normal;
+    line-height: 1.4;
+}
+
+.content-text {
+    margin: 0;
+    padding: 0 16px;
+    max-width: 600px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+    .content-title {
+        font-size: 32px;
+    }
+
+    .content-text {
+        font-size: 14px;
+    }
 }
