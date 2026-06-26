@@ -88,3 +88,62 @@ body {
         font-size: 14px;
     }
 }
+
+.content-header {
+    background-color: #3e4b5b; /* 濃いグレー */
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px 50px;
+    position: relative;
+}
+
+.content-header-title {
+    margin: 0;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.content-header-title::before {
+    display: block;
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.features .content-header-title::before {
+    content: "✓";
+}
+
+.services .content-header-title::before {
+    content: "♥";
+}
+
+.company .content-header-title::before {
+    content: "🏢";
+}
+
+.contact .content-header-title::before {
+    content: "📞";
+}
+
+.content-header-label {
+    margin: 8px 0 0;
+    font-size: 11px;
+    color: #a5b1c2;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.content-header::after {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-style: solid;
+    border-width: 12px 12px 0;
+    border-color: #3e4b5b transparent transparent;
+    display: block;
+    width: 0;
+    z-index: 10;
+}
