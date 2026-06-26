@@ -111,7 +111,7 @@ body {
 }
 
 .features .content-header-title::before {
-    content: "✓";
+    content: "✔️";
 }
 
 .services .content-header-title::before {
