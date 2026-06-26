@@ -111,7 +111,7 @@ body {
 }
 
 .features .content-header-title::before {
-    content: "✔️";
+    content: "✔";
 }
 
 .services .content-header-title::before {
@@ -123,27 +123,126 @@ body {
 }
 
 .contact .content-header-title::before {
-    content: "📞";
+    content: "☎︎";
 }
 
 .content-header-label {
-    margin: 8px 0 0;
+    margin: 0;
     font-size: 11px;
     color: #a5b1c2;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
 .content-header::after {
     content: "";
     position: absolute;
-    bottom: -12px;
+    bottom: -20px;
     left: 50%;
     transform: translateX(-50%);
     border-style: solid;
-    border-width: 12px 12px 0;
+    border-width: 20px 60px 0;
     border-color: #3e4b5b transparent transparent;
     display: block;
     width: 0;
     z-index: 10;
+}
+
+/* 記事セクション全体 */
+.posts {
+    background-color: #fff;
+    padding: 60px 0;
+}
+
+.posts-title {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin: 0 0 40px;
+    font-weight: bold;
+}
+
+.posts-list {
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.post-item {
+    width: calc(20% - 16px);
+    min-width: 180px;
+    box-sizing: border-box;
+}
+
+.post-item-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.post-item-link:hover {
+    transform: translateY(-4px);
+}
+
+.post-item-thumb {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    display: block;
+}
+
+.post-item-rank {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #e67e22; /* オレンジ */
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 8px;
+    margin: 0;
+}
+
+.post-item-category {
+    background-color: #47b39d; /* エメラルドグリーン */
+    color: #fff;
+    text-align: center;
+    font-size: 11px;
+    padding: 6px 0;
+    margin: 0;
+    font-weight: bold;
+}
+
+.post-item-title {
+    font-size: 14px;
+    color: #333;
+    margin: 10px 0 0;
+    text-align: center;
+    font-weight: normal;
+    line-height: 1.4;
+}
+
+.post-item-date {
+    display: block;
+    text-align: center;
+    color: #999;
+    font-size: 11px;
+    margin-top: 8px;
+}
+
+@media (max-width: 992px) {
+    .post-item {
+        width: calc(33.333% - 14px);
+    }
+}
+
+@media (max-width: 576px) {
+    .post-item {
+        width: 100%;
+    }
 }
