@@ -14,44 +14,44 @@ body {
     height: 90px;
 }
 
-.site-title {
+.site-header-logo {
     margin: 0;
     padding: 16px;
-    color: #fff;
     font-size: 18px;
 }
 
-.nav-list-title {
-    display: none;
+.site-header-logo a {
+    color: #fff;
+    text-decoration: none;
 }
 
-.site-nav-list {
+.site-header-menu-list {
     margin: 0;
     padding: 0 16px;
     gap: 16px;
     display: flex;
 }
 
-.nav-list-item {
+.site-header-menu-item {
     list-style: none;
     margin: 0;
     padding: 0;
-
-    & a {
-        color: #fff;
-        text-decoration: none;
-        display: block;
-        line-height: 90px;
-        padding: 0 16px;
-        transition: background-color 0.2s;
-
-        &:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-        }
-    }
 }
 
-.content-header {
+.site-header-menu-item a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    line-height: 90px;
+    padding: 0 16px;
+    transition: background-color 0.2s;
+}
+
+.site-header-menu-item a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.hero {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -62,7 +62,7 @@ body {
     height: 500px;
 }
 
-.content-title {
+.hero-title {
     margin: 0 0 24px;
     color: #fff;
     font-size: 42px;
@@ -70,7 +70,7 @@ body {
     line-height: 1.4;
 }
 
-.content-text {
+.hero-text {
     margin: 0;
     padding: 0 16px;
     max-width: 600px;
@@ -80,11 +80,11 @@ body {
 }
 
 @media (max-width: 768px) {
-    .content-title {
+    .hero-title {
         font-size: 32px;
     }
 
-    .content-text {
+    .hero-text {
         font-size: 14px;
     }
 }
