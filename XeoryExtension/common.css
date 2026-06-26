@@ -147,7 +147,6 @@ body {
     z-index: 10;
 }
 
-/* 記事セクション全体 */
 .posts {
     background-color: #fff;
     padding: 60px 0;
@@ -193,29 +192,26 @@ body {
     width: 100%;
     aspect-ratio: 3 / 2;
     object-fit: cover;
-    display: block;
 }
 
 .post-item-rank {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #e67e22; /* オレンジ */
+    background-color: #e67e22;
     color: #fff;
-    font-size: 12px;
-    font-weight: bold;
-    padding: 4px 8px;
+    font-size: 20px;
+    padding: 10px 3px;
     margin: 0;
 }
 
 .post-item-category {
-    background-color: #47b39d; /* エメラルドグリーン */
+    background-color: #47b39d;
     color: #fff;
     text-align: center;
     font-size: 11px;
-    padding: 6px 0;
+    padding: 10px 0;
     margin: 0;
-    font-weight: bold;
 }
 
 .post-item-title {
