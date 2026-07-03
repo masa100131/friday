@@ -33,18 +33,19 @@ body {
         background: none;
         border: none;
         cursor: pointer;
-        width: 30px;
-        height: 24px;
         position: relative;
         z-index: 100;
         margin-right: 20px;
+        background-color: #333;
+        width: 100px;
+        height: 90px;
     }
     
     /* 三本線の共通スタイル */
     .menu-trigger span {
         display: block;
         position: absolute;
-        width: 100%;
+        width: 40px;
         height: 3px;
         background-color: #fff;
         border-radius: 2px;
