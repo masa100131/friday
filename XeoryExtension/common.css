@@ -78,17 +78,54 @@ body {
     transform: translateY(-10px) rotate(-45deg);
 }
 
-/* Navigation Container (Mobile view) */
+/* Navigation Container */
 .site-header-nav {
     display: none;
     position: absolute;
     top: 90px;
     left: 0;
     width: 100%;
-    background-color: rgba(51, 51, 51, 0.95);
-    padding: 16px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: calc(100vh - 90px);
+    background-color: #3e4b5b;
+    padding: 50px 40px;
+    box-sizing: border-box;
     z-index: 99;
+}
+
+.site-header-nav.is-active {
+    display: block;
+}
+
+.site-header-menu-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.site-header-menu-item {
+    margin-bottom: 45px;
+}
+
+.site-header-menu-item a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    border: none;
+    padding: 0;
+    transition: opacity .3s;
+}
+
+.site-header-menu-item a::before {
+    content: "›";
+    margin-right: 12px;
+    font-size: 28px;
+}
+
+.site-header-menu-item a:hover {
+    opacity: .7;
+    background: none;
 }
 
 /* Active state for navigation menu */
@@ -197,7 +234,8 @@ body {
 }
 
 .content-header {
-    background-color: #3e4b5b; /* 濃いグレー */
+    background-color: #3e4b5b;
+    /* 濃いグレー */
     color: #fff;
     text-align: center;
     padding: 60px 20px 50px;
