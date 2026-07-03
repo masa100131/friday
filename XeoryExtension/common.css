@@ -12,12 +12,14 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 90px;
+    position: relative;
 }
 
 .site-header-logo {
     margin: 0;
     padding: 16px;
     font-size: 18px;
+    z-index: 100;
 }
 
 .site-header-logo a {
@@ -25,30 +27,134 @@ body {
     text-decoration: none;
 }
 
+/* Hamburger Menu button style (Mobile first: displayed by default) */
+.menu-trigger {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 24px;
+    position: relative;
+    z-index: 100;
+    margin-right: 20px;
+}
+
+/* 三本線の共通スタイル */
+.menu-trigger span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* 三本線の位置調整 */
+.menu-trigger span:nth-child(1) {
+    top: 0;
+}
+
+.menu-trigger span:nth-child(2) {
+    top: 10px;
+}
+
+.menu-trigger span:nth-child(3) {
+    top: 20px;
+}
+
+/* ナビゲーションが開いたとき（「x」に変形） */
+.menu-trigger[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.menu-trigger[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-trigger[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+/* Navigation Container (Mobile view) */
+.site-header-nav {
+    display: none;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(71, 179, 157, 0.95);
+    padding: 16px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 99;
+}
+
+/* Active state for navigation menu */
+.site-header-nav.is-active {
+    display: block;
+}
+
 .site-header-menu-list {
     margin: 0;
-    padding: 0 16px;
-    gap: 16px;
+    padding: 0;
     display: flex;
+    flex-direction: column;
+    list-style: none;
 }
 
 .site-header-menu-item {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    width: 100%;
 }
 
 .site-header-menu-item a {
     color: #fff;
     text-decoration: none;
     display: block;
-    line-height: 90px;
-    padding: 0 16px;
+    padding: 16px 24px;
+    line-height: normal;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     transition: background-color 0.2s;
 }
 
+.site-header-menu-item:last-child a {
+    border-bottom: none;
+}
+
 .site-header-menu-item a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Desktop styles (Override mobile styles for screens larger than 768px) */
+@media (min-width: 769px) {
+    .menu-trigger {
+        display: none;
+    }
+
+    .site-header-nav {
+        display: block;
+        position: static;
+        width: auto;
+        padding: 0;
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    .site-header-menu-list {
+        flex-direction: row;
+        gap: 16px;
+        padding: 0 16px;
+    }
+
+    .site-header-menu-item {
+        width: auto;
+    }
+
+    .site-header-menu-item a {
+        padding: 0 16px;
+        line-height: 90px;
+        border-bottom: none;
+    }
 }
 
 .hero {
