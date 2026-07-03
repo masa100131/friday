@@ -1,6 +1,6 @@
 // JavaScriptでボタンのクリックイベントを制御
-const hamburger = document.getElementById("js-hamburger");
-const nav = document.getElementById("js-nav");
+const hamburger = document.querySelector("#js-hamburger");
+const nav = document.querySelector("#js-nav");
 
 if (hamburger && nav) {
   hamburger.addEventListener("click", () => {
