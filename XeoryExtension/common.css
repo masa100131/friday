@@ -30,8 +30,9 @@ body {
 /* Hamburger Menu button style (Mobile first: displayed by default) */
 .menu-trigger {
     display: block;
-    background: none;
+    background-color: #333;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
     width: 30px;
     height: 24px;
@@ -84,7 +85,7 @@ body {
     top: 90px;
     left: 0;
     width: 100%;
-    background-color: rgba(71, 179, 157, 0.95);
+    background-color: rgba(51, 51, 51, 0.95);
     padding: 16px 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 99;
