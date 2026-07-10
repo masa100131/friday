@@ -326,19 +326,20 @@ body {
 }
 
 .post-item-category {
+    display: inline-block;
     background-color: #47b39d;
     color: #fff;
-    text-align: center;
+    text-align: left;
     font-size: 11px;
-    padding: 10px 0;
+    padding: 10px 16px 10px 10px;
     margin: 0;
 }
 
 .post-item-title {
     font-size: 14px;
     color: #333;
-    margin: 10px 0 0;
-    text-align: center;
+    margin: 10px 10px 0;
+    text-align: left;
     font-weight: normal;
     line-height: 1.4;
 }
