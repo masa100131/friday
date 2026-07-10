@@ -330,15 +330,15 @@ body {
     background-color: #47b39d;
     color: #fff;
     text-align: left;
-    font-size: 11px;
+    font-size: 12px;
     padding: 10px 16px 10px 10px;
     margin: 0;
 }
 
 .post-item-title {
-    font-size: 14px;
+    font-size: 15px;
     color: #333;
-    margin: 10px 10px 0;
+    margin: 10px 0 0;
     text-align: left;
     font-weight: normal;
     line-height: 1.4;
