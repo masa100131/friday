@@ -322,6 +322,7 @@ body {
     font-size: 20px;
     padding: 10px 3px;
     margin: 0;
+    opacity: 0.85;
 }
 
 .post-item-category {
@@ -346,6 +347,27 @@ body {
     font-size: 14px;
     line-height: 1.2;
     text-align: center;
+}
+
+.posts:first-of-type .post-item:nth-child(1) .post-item-rank {
+    background-color: #d4af37;
+}
+
+.posts:first-of-type .post-item:nth-child(2) .post-item-rank {
+    background-color: #c0c0c0;
+}
+
+.posts:first-of-type .post-item:nth-child(3) .post-item-rank {
+    background-color: #cd7f32;
+}
+
+.posts:first-of-type .post-item:nth-child(4) .post-item-rank,
+.posts:first-of-type .post-item:nth-child(5) .post-item-rank {
+    background-color: #006b4f;
+}
+
+.post-item-date {
+    background-color: #1f4e79;
 }
 
 .post-item-rank span,
