@@ -348,6 +348,11 @@ body {
     text-align: center;
 }
 
+.post-item-rank span,
+.post-item-date span {
+    font-size: 1.25em;
+}
+
 @media (max-width: 992px) {
     .post-item {
         width: calc(33.333% - 14px);
