@@ -1,174 +1,173 @@
 body {
     background-color: #ccc;
     margin: 0;
-    font-family:
-        "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans",
-        Meiryo, sans-serif;
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
+        "Hiragino Sans", Meiryo, sans-serif;
 }
 
 .site-header {
     background-color: #47b39d;
     display: flex;
     justify-content: space-between;
-        align-items: center;
-        height: 90px;
-        position: relative;
-    }
-    
-    .site-header-logo {
-        margin: 0;
-        padding: 16px;
-        font-size: 18px;
-        z-index: 100;
-    }
-    
-    .site-header-logo a {
-        color: #fff;
-        text-decoration: none;
-    }
-    
-    /* Hamburger Menu button style (Mobile first: displayed by default) */
+    align-items: center;
+    height: 90px;
+    position: relative;
+}
+
+.site-header-logo {
+    margin: 0;
+    padding: 16px;
+    font-size: 18px;
+    z-index: 100;
+}
+
+.site-header-logo a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Hamburger Menu button style (Mobile first: displayed by default) */
+.menu-trigger {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 100;
+    margin-right: 20px;
+    background-color: #333;
+    width: 100px;
+    height: 90px;
+}
+
+/* 三本線の共通スタイル */
+.menu-trigger span {
+    display: block;
+    position: absolute;
+    left: 50%;
+    width: 40px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform: translateX(-50%);
+}
+
+/* 三本線の位置調整 */
+.menu-trigger span:nth-child(1) {
+    top: 34px;
+}
+
+.menu-trigger span:nth-child(2) {
+    top: 44px;
+}
+
+.menu-trigger span:nth-child(3) {
+    top: 54px;
+}
+
+/* ナビゲーションが開いたとき（「x」に変形） */
+.menu-trigger[aria-expanded="true"] span:nth-child(1) {
+    transform: translateX(-50%) translateY(10px) rotate(45deg);
+}
+
+.menu-trigger[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-trigger[aria-expanded="true"] span:nth-child(3) {
+    transform: translateX(-50%) translateY(-10px) rotate(-45deg);
+}
+
+/* Navigation Container (Mobile view) */
+.site-header-nav {
+    display: none;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(50, 50, 50, 0.95);
+    padding: 16px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 99;
+}
+
+/* Active state for navigation menu */
+.site-header-nav.is-active {
+    display: block;
+}
+
+.site-header-menu-list {
+    margin: 0;
+    padding: 0 16px;
+    gap: 16px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+.site-header-menu-item {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.site-header-menu-item a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    line-height: 90px;
+    padding: 0 16px;
+    padding: 16px 24px;
+    line-height: normal;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    transition: background-color 0.2s;
+}
+
+.site-header-menu-item:last-child a {
+    border-bottom: none;
+}
+
+.site-header-menu-item a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Desktop styles (Override mobile styles for screens larger than 768px) */
+@media (min-width: 769px) {
     .menu-trigger {
-        display: block;
-        background: none;
-        border: none;
-        cursor: pointer;
-        position: relative;
-        z-index: 100;
-        margin-right: 20px;
-        background-color: #333;
-        width: 100px;
-        height: 90px;
-    }
-    
-    /* 三本線の共通スタイル */
-    .menu-trigger span {
-        display: block;
-        position: absolute;
-        left: 50%;
-        width: 40px;
-        height: 3px;
-        background-color: #fff;
-        border-radius: 2px;
-        transition: transform 0.3s ease, opacity 0.3s ease;
-        transform: translateX(-50%);
-    }
-    
-    /* 三本線の位置調整 */
-    .menu-trigger span:nth-child(1) {
-        top: 34px;
-    }
-    
-    .menu-trigger span:nth-child(2) {
-        top: 44px;
-    }
-    
-    .menu-trigger span:nth-child(3) {
-        top: 54px;
-    }
-    
-    /* ナビゲーションが開いたとき（「x」に変形） */
-    .menu-trigger[aria-expanded="true"] span:nth-child(1) {
-        transform: translateX(-50%) translateY(10px) rotate(45deg);
-    }
-    
-    .menu-trigger[aria-expanded="true"] span:nth-child(2) {
-        opacity: 0;
-    }
-    
-    .menu-trigger[aria-expanded="true"] span:nth-child(3) {
-        transform: translateX(-50%) translateY(-10px) rotate(-45deg);
-    }
-    
-    /* Navigation Container (Mobile view) */
-    .site-header-nav {
         display: none;
-        position: absolute;
-        top: 90px;
-        left: 0;
-        width: 100%;
-        background-color: rgba(50, 50, 50, 0.95);
-        padding: 16px 0;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        z-index: 99;
     }
-    
-    /* Active state for navigation menu */
-    .site-header-nav.is-active {
+
+    .site-header-nav {
         display: block;
+        position: static;
+        width: auto;
+        padding: 0;
+        box-shadow: none;
+        background-color: transparent;
     }
-    
+
     .site-header-menu-list {
-        margin: 0;
-        padding: 0 16px;
+        flex-direction: row;
         gap: 16px;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        list-style: none;
-    }
-    
-    .site-header-menu-item {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        width: 100%;
-    }
-    
-    .site-header-menu-item a {
-        color: #fff;
-        text-decoration: none;
-        display: block;
-        line-height: 90px;
         padding: 0 16px;
-        padding: 16px 24px;
-        line-height: normal;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-        transition: background-color 0.2s;
     }
-    
-    .site-header-menu-item:last-child a {
+
+    .site-header-menu-item {
+        width: auto;
+    }
+
+    .site-header-menu-item a {
+        padding: 0 16px;
+        line-height: 90px;
         border-bottom: none;
     }
-    
-    .site-header-menu-item a:hover {
-        background-color: rgba(255, 255, 255, 0.2);
-        background-color: rgba(255, 255, 255, 0.15);
-    }
-    
-    /* Desktop styles (Override mobile styles for screens larger than 768px) */
-    @media (min-width: 769px) {
-        .menu-trigger {
-            display: none;
-        }
-    
-        .site-header-nav {
-            display: block;
-            position: static;
-            width: auto;
-            padding: 0;
-            box-shadow: none;
-            background-color: transparent;
-        }
-    
-        .site-header-menu-list {
-            flex-direction: row;
-            gap: 16px;
-            padding: 0 16px;
-        }
-    
-        .site-header-menu-item {
-            width: auto;
-        }
-    
-        .site-header-menu-item a {
-            padding: 0 16px;
-            line-height: 90px;
-            border-bottom: none;
-        }
-    }
-    
-    .hero {
+}
+
+.hero {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -265,33 +264,15 @@ body {
     z-index: 10;
 }
 
+.main {
+    background-color: #f5f5f5;
+}
+
 .posts {
-    background-color: #fff;
-    padding: 60px 0;
+    margin: 40px 0;
+    padding: 0 0 60px 0;
+    background: #fff;
     border-bottom: 1px solid #d6d6d6;
-}
-
-.posts:first-of-type {
-    background: linear-gradient(to bottom, #f7f7f7 0 60px, #fff 60px);
-}
-
-.posts:nth-of-type(2) {
-    position: relative;
-    background: linear-gradient(
-        to bottom,
-        #f7f7f7 0 60px,
-        #fff 60px calc(100% - 60px),
-        #f7f7f7 calc(100% - 60px) 100%
-    );
-}
-
-.posts:nth-of-type(2)::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    bottom: 60px;
-    left: 0;
-    border-top: 1px solid #d6d6d6;
 }
 
 .posts-title {
@@ -316,10 +297,6 @@ body {
     padding: 0 20px;
     gap: 20px;
     flex-wrap: wrap;
-}
-
-.posts:nth-of-type(2) .posts-list {
-    margin-bottom: 48px;
 }
 
 .post-item {
