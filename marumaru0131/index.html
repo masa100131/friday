@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/home/logo.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/home/logo.png" />
+    <link rel="apple-touch-icon" href="/home/icon.webp" />
+    <link rel="icon" href="/home/logo.png" />
+    <title>ㅤ</title>
+    <link rel="stylesheet" href="style.css?v=2" />
+  </head>
+  <body>
+    <header>
+      <img src="/home/logo.png" alt="Logo" class="logo-img" />
+      <h1 class="site-title">MASATO(S)</h1>
+    </header>
+    <main class="wrapper" id="js-wrapper">
+      <section class="section bz">
+        <img src="/bz/logo.png" alt="B'z" class="artist-logo" />
+        <a href="/bz/index.html" class="btn">ENTER</a>
+      </section>
+      <section class="section mc">
+        <img src="/mc/logo.png" alt="Mr.Children" class="artist-logo" />
+        <a href="/mc/index.html" class="btn">ENTER</a>
+      </section>
+      <section class="section sakana">
+        <img src="/sakana/logo.png" alt="サカナクション" class="artist-logo" />
+        <a href="/sakana/index.html" class="btn">ENTER</a>
+      </section>
+      <section class="section ryokushaka">
+        <img src="/ryokushaka/logo.png" alt="緑黄色社会" class="artist-logo" />
+        <a href="/ryokushaka/index.html" class="btn">ENTER</a>
+      </section>
+      <section class="section mga">
+        <img src="/mga/logo.png" alt="Mrs. GREEN APPLE" class="artist-logo" />
+        <a href="/mga/index.html" class="btn">ENTER</a>
+      </section>
+      <section class="section tomoo">
+        <img src="/tomoo/logo.png" alt="TOMOO" class="artist-logo" />
+        <a href="/tomoo/index.html" class="btn">ENTER</a>
+      </section>
+      <section class="section bmt">
+        <img src="/bmt/logo.png" alt="Broken my toybox" class="artist-logo" />
+        <a href="/bmt/index.html" class="btn">ENTER</a>
+      </section>
+      <section class="section vega">
+        <img src="/vega/logo.png" alt="セブンス・ベガ" class="artist-logo" />
+        <a href="/vega/index.html" class="btn">ENTER</a>
+      </section>
+      <section class="section mm">
+        <img src="/mm/logo.png" alt="Maverick Mom" class="artist-logo" />
+        <a href="/mm/index.html" class="btn">ENTER</a>
+      </section>
+    </main>
+    <script>
+      const wrapper = document.getElementById("js-wrapper");
+
+      window.addEventListener(
+        "wheel",
+        (e) => {
+          if (window.innerWidth >= 768) {
+            e.preventDefault();
+
+            const nextScrollLeft = wrapper.scrollLeft + e.deltaY + e.deltaX;
+            const maxScrollLeft = wrapper.scrollWidth - wrapper.clientWidth;
+
+            wrapper.scrollLeft = Math.max(0, Math.min(maxScrollLeft, nextScrollLeft));
+          }
+        },
+        { passive: false },
+      );
+    </script>
+  </body>
+</html>
