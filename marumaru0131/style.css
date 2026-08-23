@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    color: white;
+}
+header {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+.logo-img { height: 45px; width: auto; margin-right: 15px; }
+.site-title { font-size: 1.1rem; letter-spacing: 0.25em; margin: 0; font-weight: bold; text-transform: uppercase; }
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-shrink: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; 
+}
+.bz            { background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/bz/home.webp'); }
+.mc            { background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/mc/home.webp');}
+.sakana        { background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/sakana/home.webp'); }
+.ryokushaka    { background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/ryokushaka/home.webp'); }
+.mga           { background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/mga/home.webp'); }
+.tomoo         { background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/tomoo/home.webp'); }
+.bmt           { background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/bmt/home.webp');}
+.vega          { background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/vega/home.webp');}
+.mm            { background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/mm/home.webp');}
+.artist-logo {
+    width: auto;
+    max-width: 40%;
+    max-height: 20%;
+    margin-bottom: 30px;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.8));
+}
+.btn {
+    padding: 15px 50px;
+    font-size: 0.8rem;
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.8);
+    text-decoration: none;
+    letter-spacing: 0.3em;
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(8px);
+    transition: 0.4s;
+}
+.btn:hover {
+    background: #fff;
+    color: #000;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    transform: scale(1.05);
+}
+.site-title {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #fff;
+    animation: typing 2s steps(20, end), blink-caret 0.75s step-end infinite;
+}
+@keyframes typing { from { width: 0 } to { width: 100% } }
+@keyframes blink-caret { from, to { border-color: transparent } 50% { border-color: #fff; } }
+@media (min-width: 768px) {
+    body, html {
+        overflow: hidden;
+        -webkit-overflow-scrolling: touch;
+    }
+    .wrapper {
+        display: flex;
+        width: 100%;
+        height: 100dvh;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-behavior: auto;
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior-x: contain;
+        touch-action: pan-x;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    .wrapper::-webkit-scrollbar { display: none; }
+    .section {
+        flex: 0 0 100vw;
+        width: 100vw;
+        height: 100dvh;
+        background-size: contain;
+        background-attachment: scroll; 
+    }
+}
+@media (min-width: 768px) and (hover: hover) {
+    .section {
+        background-attachment: fixed;
+    }
+}
+@media (max-width: 767px) {
+    body, html {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    .wrapper {
+        display: block;
+        width: 100%;
+    }
+    .section {
+        width: 100vw;
+        height: 56.25vw;
+        background-size: cover;
+    }
+    .artist-logo {
+        max-width: 60%;
+        max-height: 80px;
+        margin-bottom: 15px;
+    }
+    .btn {
+        padding: 8px 25px;
+        font-size: 0.65rem;
+    }
+    header { top: 20px; left: 20px; }
+    .logo-img { height: 30px; }
+}
