@@ -1,0 +1,80 @@
+[     576ms] [INFO] Resource Sentinel initialized... @ https://app.notion.com/p/Web-04-21-349c714b851d80fb8e17c06dd4c36d79?source=copy_link&session_sync_attempted=1:37
+[     827ms] [INFO] 2026-09-11T02:34:01.068Z [info] FeatureFlagTransactionQueue: preferIndexedDB {team: no-team-specified} @ https://app.notion.com/_assets/app-1b5a89fc69434d5e.js:6
+[     923ms] [INFO] 2026-09-11T02:34:01.165Z [info] PageLoader: loserAborted {data: Object} @ https://app.notion.com/_assets/app-1b5a89fc69434d5e.js:6
+[    1043ms] [INFO] 2026-09-11T02:34:01.284Z [info] appHelpers: shouldShowError {data: Object} @ https://app.notion.com/_assets/app-1b5a89fc69434d5e.js:6
+[    1058ms] [INFO] 2026-09-11T02:34:01.299Z [info] appHelpers: shouldShowError {data: Object} @ https://app.notion.com/_assets/app-1b5a89fc69434d5e.js:6
+[    1074ms] [LOG] %c
+	nnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+	nnnn                         nnnn
+	nnnnnnn                          nnnn
+	nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+	nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+	nnnnnnnn                           nnn
+	nnnnnnnn    nnnnnnnn     nnnnnnn   nnn
+	nnnnnnnn      nnnnnnn      nnn     nnn
+	nnnnnnnn      nnnnnnnn     nnn     nnn
+	nnnnnnnn      nnnnnnnnnn   nnn     nnn
+	nnnnnnnn      nnn nnnnnnn  nnn     nnn
+	nnnnnnnn      nnn  nnnnnnnnnnn     nnn
+	nnnnnnnn      nnn   nnnnnnnnnn     nnn
+	nnnnnnnn      nnn     nnnnnnnn     nnn
+	nnnnnnnn      nnn      nnnnnnn     nnn
+	nnnnnnnn    nnnnnnnn    nnnnnn     nnn
+	  nnnnnn                           nnn
+		nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn		We're hiring!
+		  nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn		notion.com/careers
+
+	“yeah, I would probably eat a lemon for one hundred dollars” -- Ivan Zhao (2023-07-14)
+				  font-family: monospace @ https://app.notion.com/_assets/mainApp-60ff2cd824189765.js:37
+[    1163ms] [WARNING] Ignoring inability to install OPFS sqlite3_vfs: Cannot install OPFS: Missing SharedArrayBuffer and/or Atomics. The server must emit the COOP/COEP response headers to enable those. See https://sqlite.org/wasm/doc/trunk/persistence.md#coop-coep @ https://app.notion.com/_assets/wasm-sqlite-worker-b3cdcfff3285667b.js:0
+[    1245ms] [INFO] 2026-09-11T02:34:01.486Z [info] sqliteSchemaHelpers: attemptFastForwardMigration {data: Object} @ https://app.notion.com/_assets/app-1b5a89fc69434d5e.js:6
+[    1264ms] [INFO] 2026-09-11T02:34:01.506Z [info] sqliteSchemaHelpers: successfulFastForwardMigration {data: Object} @ https://app.notion.com/_assets/app-1b5a89fc69434d5e.js:6
+[    1285ms] [INFO] 2026-09-11T02:34:01.526Z [error] handleRestrictedStateForResponse: callApi {data: Object} @ https://app.notion.com/_assets/app-1b5a89fc69434d5e.js:6
+[    1997ms] [INFO] 2026-09-11T02:34:02.239Z [info] useExpPingPolling: exp_ping_success {data: Object} @ https://app.notion.com/_assets/app-1b5a89fc69434d5e.js:6
+[    2089ms] [WARNING] Amplitude Logger [Warn]: Event not tracked, no destination plugins on the instance @ https://app.notion.com/_assets/transport-support-c8dbde906ae5699d.js:0
+[    2090ms] [INFO] 2026-09-11T02:34:02.332Z [error] eventTrailApiHelpers: trackFailure {error: Object} @ https://app.notion.com/_assets/app-1b5a89fc69434d5e.js:6
+[    2714ms] [INFO] 2026-09-11T02:34:02.956Z [info] appHelpers: shouldShowError {data: Object} @ https://app.notion.com/_assets/app-1b5a89fc69434d5e.js:6
+[    2789ms] [INFO] 2026-09-11T02:34:03.031Z [info] pageError: pageError {data: Object} @ https://app.notion.com/_assets/app-1b5a89fc69434d5e.js:6
+[    3011ms] [INFO] 2026-09-11T02:34:03.253Z [error] handleRestrictedStateForResponse: callApi {data: Object} @ https://app.notion.com/_assets/app-1b5a89fc69434d5e.js:6
+[    3166ms] [WARNING] [GSI_LOGGER]: Your client application uses one of the Google One Tap prompt UI status methods that may stop functioning when FedCM becomes mandatory. Refer to the migration guide to update your code accordingly and opt-in to FedCM to test your changes. Learn more: https://developers.google.com/identity/gsi/web/guides/fedcm-migration?s=dc#display_moment and https://developers.google.com/identity/gsi/web/guides/fedcm-migration?s=dc#skipped_moment @ https://app.notion.com/_assets/90305-597ffd983e8fca93.js:472
+[    3168ms] [ERROR] Not signed in with the identity provider. @ https://app.notion.com/p/Web-04-21-349c714b851d80fb8e17c06dd4c36d79?source=copy_link&session_sync_attempted=1:0
+[    3691ms] [INFO] 2026-09-11T02:34:03.933Z [error] handleRestrictedStateForResponse: callApi {data: Object} @ https://app.notion.com/_assets/90305-597ffd983e8fca93.js:472
+[    3814ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://cdn.metadata.io/pixel/config/1127.json:0
+[   13309ms] [ERROR] Cross-Origin-Opener-Policy policy would block the window.closed call. @ https://app.notion.com/_assets/UISpacePermissionGroupToken-3e8e8700d4f43706.js:188
+[   13309ms] [ERROR] Cross-Origin-Opener-Policy policy would block the window.closed call. @ https://app.notion.com/_assets/UISpacePermissionGroupToken-3e8e8700d4f43706.js:188
+[   27093ms] [ERROR] [GSI_LOGGER]: FedCM get() rejects with NetworkError: Error retrieving a token. @ https://app.notion.com/_assets/90305-597ffd983e8fca93.js:472
+[   45409ms] [ERROR] Cross-Origin-Opener-Policy policy would block the window.closed call. @ https://app.notion.com/_assets/UISpacePermissionGroupToken-3e8e8700d4f43706.js:188
+[   45409ms] [ERROR] Cross-Origin-Opener-Policy policy would block the window.closed call. @ https://app.notion.com/_assets/UISpacePermissionGroupToken-3e8e8700d4f43706.js:188
+[   46029ms] [ERROR] Cross-Origin-Opener-Policy policy would block the window.close call. @ https://app.notion.com/_assets/UISpacePermissionGroupToken-3e8e8700d4f43706.js:188
+[   46029ms] [ERROR] Cross-Origin-Opener-Policy policy would block the window.close call. @ https://app.notion.com/_assets/UISpacePermissionGroupToken-3e8e8700d4f43706.js:188
+[   46037ms] [INFO] 2026-09-11T02:34:46.278Z [info] handleGoogleAuthRedirect: googleAuthRedirect {data: Object} @ https://app.notion.com/_assets/90305-597ffd983e8fca93.js:472
+[   46038ms] [INFO] 2026-09-11T02:34:46.279Z [info] handleGoogleAuthRedirect: googleAuthRedirectLoginAttempt {data: Object} @ https://app.notion.com/_assets/90305-597ffd983e8fca93.js:472
+[   46042ms] [INFO] 2026-09-11T02:34:46.283Z [info] appHelpers: shouldShowError {data: Object} @ https://app.notion.com/_assets/90305-597ffd983e8fca93.js:472
+[   47726ms] [INFO] 2026-09-11T02:34:47.967Z [error] main: ClientError {error: Object} @ https://app.notion.com/_assets/90305-597ffd983e8fca93.js:472
+[   47752ms] Error: Failed to load a required record: user_root, 345d872b-594c-811d-b7ba-0002daedf127, undefined.
+    at Object.loadRecordModel [as loadFn] (https://app.notion.com/_assets/UISpacePermissionGroupToken-3e8e8700d4f43706.js:5:101988)
+    at async https://app.notion.com/_assets/UISpacePermissionGroupToken-3e8e8700d4f43706.js:192:16833
+    at async Promise.all (index 0)
+    at async o (https://app.notion.com/_assets/UISpacePermissionGroupToken-3e8e8700d4f43706.js:192:16774)
+    at async i (https://app.notion.com/_assets/UISpacePermissionGroupToken-3e8e8700d4f43706.js:192:16217)
+    at async Object.s (https://app.notion.com/_assets/UISpacePermissionGroupToken-3e8e8700d4f43706.js:192:17608)
+    at async Object.i (https://app.notion.com/_assets/UISpacePermissionGroupToken-3e8e8700d4f43706.js:5:101562)
+    at async h (https://app.notion.com/_assets/UISpacePermissionGroupToken-3e8e8700d4f43706.js:87:113098)
+    at async i.measureErrors (https://app.notion.com/_assets/UISpacePermissionGroupToken-3e8e8700d4f43706.js:189:1108622)
+    at async g (https://app.notion.com/_assets/UISpacePermissionGroupToken-3e8e8700d4f43706.js:87:111095)
+[   47914ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://app.notion.com/api/v3/recordPageExit:0
+[   47942ms] [INFO] 2026-09-11T02:34:48.184Z [info] syncRecordValuesBatched: missingSpacePointerForNotionUserRequest {actor: Object, data: Object} @ https://app.notion.com/_assets/90305-597ffd983e8fca93.js:472
+[   47946ms] [ERROR] HttpRequestError: Received HTTP 401
+    at d (https://app.notion.com/_assets/ClientFramework-4b9f2c7d1ee49d9a.js:1:126237)
+    at async m (https://app.notion.com/_assets/ClientFramework-4b9f2c7d1ee49d9a.js:1:128128)
+    at async r (https://app.notion.com/_assets/app-1b5a89fc69434d5e.js:1:142)
+    at async l (https://app.notion.com/_assets/UISpacePermissionGroupToken-3e8e8700d4f43706.js:1:7664) @ https://app.notion.com/_assets/90305-597ffd983e8fca93.js:472
+[   47946ms] [INFO] 2026-09-11T02:34:48.188Z [error] api: httpTrigger401 {data: Object} @ https://app.notion.com/_assets/90305-597ffd983e8fca93.js:472
+[   47959ms] [INFO] 2026-09-11T02:34:48.201Z [info] PageLoader: loserAborted {data: Object} @ https://app.notion.com/_assets/90305-597ffd983e8fca93.js:472
+[   48454ms] [INFO] 2026-09-11T02:34:48.695Z [error] ActorMemberships: MissingActorMembership {error: Object, data: Object} @ https://app.notion.com/_assets/90305-597ffd983e8fca93.js:472
+[   48454ms] [INFO] 2026-09-11T02:34:48.696Z [error] ActorMemberships: MissingActorMembership {error: Object, data: Object} @ https://app.notion.com/_assets/90305-597ffd983e8fca93.js:472
+[   49348ms] [INFO] 2026-09-11T02:34:49.590Z [info] ai.completionActions: maybeUpdateAIUsageEligibilityStoreV2Refreshing {data: Object} @ https://app.notion.com/_assets/90305-597ffd983e8fca93.js:472
+[   98595ms] [INFO] 2026-09-11T02:35:38.836Z [error] ActorMemberships: MissingActorMembership {error: Object, data: Object} @ https://app.notion.com/_assets/90305-597ffd983e8fca93.js:472
+[   98595ms] [INFO] 2026-09-11T02:35:38.837Z [error] ActorMemberships: MissingActorMembership {error: Object, data: Object} @ https://app.notion.com/_assets/90305-597ffd983e8fca93.js:472
+[  133914ms] [INFO] 2026-09-11T02:36:14.155Z [error] ActorMemberships: MissingActorMembership {error: Object, data: Object} @ https://app.notion.com/_assets/90305-597ffd983e8fca93.js:472
+[  133914ms] [INFO] 2026-09-11T02:36:14.155Z [error] ActorMemberships: MissingActorMembership {error: Object, data: Object} @ https://app.notion.com/_assets/90305-597ffd983e8fca93.js:472
