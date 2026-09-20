@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="/home/p-style.css?v=2" />
     <style>
       body {
-        --bg-1: #1f1f1f;
-        --bg-2: #4a4a4a;
-        --bg-3: #ababab;
-        --bg-4: #cfcfcf;
+        --bg-1: #471905;
+        --bg-2: #8b4c1f;
+        --bg-3: #c87748;
+        --bg-4: #ffd2b9;
       }
     </style>
   </head>
@@ -31,7 +31,7 @@
         alt="Broken my toybox photo"
         class="page-photo"
       />
-      <p class="artist-note">(L→R 郷間直人、藤井樹、高田健太郎)</p>
+      <p class="artist-note">(L→R 郷間直人、高田健太郎、関口広章、藤井樹)</p>
       <img
         src="/bmt/logo.png"
         alt="Broken my toybox logo"
@@ -56,6 +56,10 @@
           <tr>
             <th scope="row">郷間直人</th>
             <td>ベース</td>
+          </tr>
+          <tr>
+            <th scope="row">関口広章</th>
+            <td>ドラム</td>
           </tr>
         </tbody>
       </table>
@@ -183,6 +187,30 @@
           郷間直人
         </a>
         <a
+          href="https://www.instagram.com/hiropon_drums/"
+          class="sns-button instagram"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="sns-icon"
+          >
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+          関口広章
+        </a>
+        <a
           href="https://www.youtube.com/@Brokenmytoybox"
           class="sns-button youtube"
           target="_blank"
@@ -210,18 +238,19 @@
           YouTube
         </a>
       </div>
-      <section class="album-release" aria-label="Broken my toybox 最新アルバム">
-        <h2 class="album-heading">最新アルバム</h2>
-        <h3 class="album-subheading">life</h3>
+      <section class="album-release" aria-label="Broken my toybox 最新シングル">
+        <h2 class="album-heading">最新シングル</h2>
+        <h3 class="album-subheading">反抗の声明 -Re:Parade-</h3>
         <div
-          class="video-thumb-wide"
+          class="video-thumb"
           onclick="loadVideo(this)"
-          data-video-id="QEe5NYoVZOg"
-          data-video-query="si=triA8ntI2gViGd0k"
+          data-video-id="Ait8zbrILl0"
+          data-video-query="si=oE4V5yS3Zs6vPKCM"
           style="
-            background-image: url(&quot;https://img.youtube.com/vi/7QoUpJkRZrU/maxresdefault.jpg&quot;);
+            background-image: url(&quot;https://img.youtube.com/vi/Ait8zbrILl0/maxresdefault.jpg&quot;);
           "
         ></div>
+      </section>
       <section class="album-release" aria-label="Broken my toybox MUSIC VIDEO">
         <h2 class="album-heading">MUSIC VIDEO</h2>
         <div
@@ -357,13 +386,11 @@
         </a>
       </div>
     </main>
-      <script>
+    <script>
       function loadVideo(container) {
         const videoId = container.dataset.videoId;
         const videoQuery = container.dataset.videoQuery;
-        const query = videoQuery
-          ? `?${videoQuery}&autoplay=1`
-          : "?autoplay=1";
+        const query = videoQuery ? `?${videoQuery}&autoplay=1` : "?autoplay=1";
         container.innerHTML = `<iframe class="video-frame" src="https://www.youtube.com/embed/${videoId}${query}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
         container.onclick = null;
       }

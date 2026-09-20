@@ -272,20 +272,21 @@
           山口一郎
         </a>
       </div>
-      <section class="album-release" aria-label="サカナクション 最新シングル">
+      <section class="album-release" aria-label="サカナクション">
         <h2 class="album-heading">最新シングル</h2>
-        <h3 class="album-subheading">いらない</h3>
-        <div
-          class="video-thumb"
-          onclick="loadVideo(this)"
-          data-video-id="sePuIpAhdB0"
-          data-video-query="si=oE4V5yS3Zs6vPKCM"
-          style="
-            background-image: url(&quot;https://img.youtube.com/vi/sePuIpAhdB0/maxresdefault.jpg&quot;);
-          "
-        ></div>
+        <h3 class="album-subheading">怪獣 / いらない</h3>
+        <a
+          href="https://jvcmusic.lnk.to/sakanaction_kaijuiranai"
+          class="album-cover-link"
+        >
+          <img
+            src="https://linkstorage.linkfire.com/medialinks/images/fb1fa21d-42d5-4da0-88d0-ab4b3aaa7583/artwork-440x440.jpg"
+            alt="怪獣 / いらない"
+            class="album-cover"
+          />
+        </a>
       </section>
-      <section class="album-release" aria-label="サカナクション MUSIC VIDEO">
+      <section class="album-release" aria-label="サカナクション">
         <h2 class="album-heading">MUSIC VIDEO</h2>
         <div
           class="video-thumb-wide"
@@ -296,6 +297,17 @@
             background-image: url(&quot;https://img.youtube.com/vi/iRb67zfMF7M/maxresdefault.jpg&quot;);
           "
         ></div>
+        <script>
+          function loadVideo(container) {
+            const videoId = container.dataset.videoId;
+            const videoQuery = container.dataset.videoQuery;
+            const query = videoQuery
+              ? `?${videoQuery}&autoplay=1`
+              : "?autoplay=1";
+            container.innerHTML = `<iframe class="video-frame" src="https://www.youtube.com/embed/${videoId}${query}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+            container.onclick = null;
+          }
+        </script>
         <h3 class="album-subheading">いらない</h3>
         <div
           class="video-thumb-wide"
@@ -306,6 +318,17 @@
             background-image: url(&quot;https://img.youtube.com/vi/a8dgNdJVluc/maxresdefault.jpg&quot;);
           "
         ></div>
+        <script>
+          function loadVideo(container) {
+            const videoId = container.dataset.videoId;
+            const videoQuery = container.dataset.videoQuery;
+            const query = videoQuery
+              ? `?${videoQuery}&autoplay=1`
+              : "?autoplay=1";
+            container.innerHTML = `<iframe class="video-frame" src="https://www.youtube.com/embed/${videoId}${query}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+            container.onclick = null;
+          }
+        </script>
         <h3 class="album-subheading">怪獣</h3>
         <div
           class="video-thumb-wide"
@@ -316,6 +339,17 @@
             background-image: url(&quot;https://img.youtube.com/vi/MzHZCfGQsVs/maxresdefault.jpg&quot;);
           "
         ></div>
+        <script>
+          function loadVideo(container) {
+            const videoId = container.dataset.videoId;
+            const videoQuery = container.dataset.videoQuery;
+            const query = videoQuery
+              ? `?${videoQuery}&autoplay=1`
+              : "?autoplay=1";
+            container.innerHTML = `<iframe class="video-frame" src="https://www.youtube.com/embed/${videoId}${query}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+            container.onclick = null;
+          }
+        </script>
         <h3 class="album-subheading">月の椀</h3>
         <div
           class="video-thumb-wide"
@@ -326,6 +360,17 @@
             background-image: url(&quot;https://img.youtube.com/vi/rEw1AVeuSjg/maxresdefault.jpg&quot;);
           "
         ></div>
+        <script>
+          function loadVideo(container) {
+            const videoId = container.dataset.videoId;
+            const videoQuery = container.dataset.videoQuery;
+            const query = videoQuery
+              ? `?${videoQuery}&autoplay=1`
+              : "?autoplay=1";
+            container.innerHTML = `<iframe class="video-frame" src="https://www.youtube.com/embed/${videoId}${query}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+            container.onclick = null;
+          }
+        </script>
         <h3 class="album-subheading">ショック！</h3>
         <div
           class="video-thumb-wide"
@@ -336,6 +381,17 @@
             background-image: url(&quot;https://img.youtube.com/vi/hGT2Y3f1phs/maxresdefault.jpg&quot;);
           "
         ></div>
+        <script>
+          function loadVideo(container) {
+            const videoId = container.dataset.videoId;
+            const videoQuery = container.dataset.videoQuery;
+            const query = videoQuery
+              ? `?${videoQuery}&autoplay=1`
+              : "?autoplay=1";
+            container.innerHTML = `<iframe class="video-frame" src="https://www.youtube.com/embed/${videoId}${query}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+            container.onclick = null;
+          }
+        </script>
         <h3 class="album-subheading">プラトー</h3>
         <div
           class="video-thumb-wide"
@@ -346,9 +402,20 @@
             background-image: url(&quot;https://img.youtube.com/vi/2I25AFSBm2g/maxresdefault.jpg&quot;);
           "
         ></div>
+        <script>
+          function loadVideo(container) {
+            const videoId = container.dataset.videoId;
+            const videoQuery = container.dataset.videoQuery;
+            const query = videoQuery
+              ? `?${videoQuery}&autoplay=1`
+              : "?autoplay=1";
+            container.innerHTML = `<iframe class="video-frame" src="https://www.youtube.com/embed/${videoId}${query}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+            container.onclick = null;
+          }
+        </script>
         <h3 class="album-subheading">夜の踊り子</h3>
       </section>
-      <section class="album-release" aria-label="サカナクション LIVE">
+      <section class="album-release" aria-label="サカナクション">
         <h2 class="album-heading">LIVE</h2>
         <div
           class="video-thumb-wide"
@@ -359,6 +426,17 @@
             background-image: url(&quot;https://img.youtube.com/vi/Hz-VBzYHA0k/maxresdefault.jpg&quot;);
           "
         ></div>
+        <script>
+          function loadVideo(container) {
+            const videoId = container.dataset.videoId;
+            const videoQuery = container.dataset.videoQuery;
+            const query = videoQuery
+              ? `?${videoQuery}&autoplay=1`
+              : "?autoplay=1";
+            container.innerHTML = `<iframe class="video-frame" src="https://www.youtube.com/embed/${videoId}${query}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+            container.onclick = null;
+          }
+        </script>
         <h3 class="album-subheading">
           ミュージック（SAKANAQUARIUM 2024 "turn"）
         </h3>
@@ -371,6 +449,17 @@
             background-image: url(&quot;https://img.youtube.com/vi/cSjyv-A0rBI/maxresdefault.jpg&quot;);
           "
         ></div>
+        <script>
+          function loadVideo(container) {
+            const videoId = container.dataset.videoId;
+            const videoQuery = container.dataset.videoQuery;
+            const query = videoQuery
+              ? `?${videoQuery}&autoplay=1`
+              : "?autoplay=1";
+            container.innerHTML = `<iframe class="video-frame" src="https://www.youtube.com/embed/${videoId}${query}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+            container.onclick = null;
+          }
+        </script>
         <h3 class="album-subheading">
           ワンダーランド（SAKANAQUARIUM 光 ONLINE）
         </h3>
@@ -383,6 +472,17 @@
             background-image: url(&quot;https://img.youtube.com/vi/7jy8bGlSZaM/maxresdefault.jpg&quot;);
           "
         ></div>
+        <script>
+          function loadVideo(container) {
+            const videoId = container.dataset.videoId;
+            const videoQuery = container.dataset.videoQuery;
+            const query = videoQuery
+              ? `?${videoQuery}&autoplay=1`
+              : "?autoplay=1";
+            container.innerHTML = `<iframe class="video-frame" src="https://www.youtube.com/embed/${videoId}${query}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+            container.onclick = null;
+          }
+        </script>
         <h3 class="album-subheading">モス（SAKANAQUARIUM 2019 "834.194"）</h3>
       </section>
       <div class="back-to-home-container">
@@ -406,16 +506,5 @@
         </a>
       </div>
     </main>
-      <script>
-      function loadVideo(container) {
-        const videoId = container.dataset.videoId;
-        const videoQuery = container.dataset.videoQuery;
-        const query = videoQuery
-          ? `?${videoQuery}&autoplay=1`
-          : "?autoplay=1";
-        container.innerHTML = `<iframe class="video-frame" src="https://www.youtube.com/embed/${videoId}${query}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
-        container.onclick = null;
-      }
-    </script>
   </body>
 </html>
