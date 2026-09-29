@@ -211,18 +211,16 @@
           YouTube
         </a>
       </div>
-      <section class="album-release" aria-label="Mrs. GREEN APPLE 最新シングル">
-        <h2 class="album-heading">最新シングル</h2>
-        <h3 class="album-subheading">Brand New</h3>
-        <div
-          class="video-thumb"
-          onclick="loadVideo(this)"
-          data-video-id="UZ4an60Zmvc"
-          data-video-query="si=oE4V5yS3Zs6vPKCM"
-          style="
-            background-image: url(&quot;https://img.youtube.com/vi/UZ4an60Zmvc/maxresdefault.jpg&quot;);
-          "
-        ></div>
+      <section class="album-release" aria-label="Mrs. GREEN APPLE 最新アルバム">
+        <h2 class="album-heading">最新アルバム</h2>
+        <h3 class="album-subheading">POPS</h3>
+        <a href="https://lnk.to/MGA_POPS" class="album-cover-link">
+          <img
+            src="https://linkstorage.linkfire.com/medialinks/images/fecf5574-25d0-4d1e-8922-59766e7cca8e/artwork-440x440.jpg"
+            alt="POPS"
+            class="album-cover"
+          />
+        </a>
       </section>
       <section class="album-release" aria-label="Mrs. GREEN APPLE MUSIC VIDEO">
         <h2 class="album-heading">MUSIC VIDEO</h2>
@@ -381,13 +379,11 @@
         </a>
       </div>
     </main>
-      <script>
+    <script>
       function loadVideo(container) {
         const videoId = container.dataset.videoId;
         const videoQuery = container.dataset.videoQuery;
-        const query = videoQuery
-          ? `?${videoQuery}&autoplay=1`
-          : "?autoplay=1";
+        const query = videoQuery ? `?${videoQuery}&autoplay=1` : "?autoplay=1";
         container.innerHTML = `<iframe class="video-frame" src="https://www.youtube.com/embed/${videoId}${query}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
         container.onclick = null;
       }
