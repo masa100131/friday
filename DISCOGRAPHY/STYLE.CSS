@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background: #ffffff;
+    color: #111111;
+    font-family: Arial, "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+}
+header {
+    width: 100%;
+    padding: 30px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #111111;
+}
+header>a {
+    color: #111111;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+}
+main {
+    width: 100%;
+}
+.discography {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 100px 60px;
+}
+.page-title {
+    margin-bottom: 120px;
+}
+.page-title p {
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    margin-bottom: 20px;
+}
+.page-title h1 {
+    font-size: clamp(50px, 8vw, 120px);
+    line-height: 0.9;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+}
+.artist {
+    margin-bottom: 140px;
+}
+.artist h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 45px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #111111;
+}
+.albums {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px 25px;
+}
+.album a {
+    display: block;
+    color: #111111;
+    text-decoration: none;
+}
+.album img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    background: #eeeeee;
+    transition:
+        transform 0.4s ease,
+        opacity 0.4s ease;
+}
+.album a:hover img {
+    transform: translateY(-8px);
+    opacity: 0.8;
+}
+.album-number {
+    margin-top: 15px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+}
+.album h3 {
+    margin-top: 18px;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+.album p {
+    margin-top: 6px;
+    font-size: 12px;
+    color: #666666;
+    letter-spacing: 0.08em;
+}
+@media screen and (max-width: 900px) {
+    header {
+        padding: 25px 30px;
+    }
+    .discography {
+        padding: 70px 30px;
+    }
+    .page-title {
+        margin-bottom: 80px;
+    }
+    .albums {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px 20px;
+    }
+    .artist {
+        margin-bottom: 100px;
+    }
+}
+@media screen and (max-width: 600px) {
+    header {
+        padding: 20px;
+    }
+    header>a {
+        font-size: 18px;
+    }
+    .discography {
+        padding: 50px 20px;
+    }
+    .page-title {
+        margin-bottom: 60px;
+    }
+    .page-title p {
+        font-size: 11px;
+    }
+    .page-title h1 {
+        font-size: 50px;
+    }
+    .artist {
+        margin-bottom: 80px;
+    }
+    .artist h2 {
+        font-size: 22px;
+        margin-bottom: 30px;
+    }
+    .albums {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px 15px;
+    }
+    .album-number {
+        font-size: 9px;
+    }
+    .album h3 {
+        font-size: 13px;
+        margin-top: 12px;
+    }
+    .album p {
+        font-size: 10px;
+    }
+}
